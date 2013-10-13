@@ -7,6 +7,7 @@ SITE
     openssh (1.3.0)
       iptables (>= 0.0.0)
     postfix (3.0.2)
+    rsync (0.8.4)
     vim (1.0.2)
     zsh (1.0.0)
 
@@ -15,6 +16,7 @@ DEPENDENCIES
   ntp (>= 0)
   openssh (>= 0)
   postfix (>= 0)
+  rsync (>= 0)
   vim (>= 0)
   zsh (>= 0)
 

@@ -6,6 +6,7 @@ run_list %W(
   recipe[ntp]
   recipe[vim]
   recipe[zsh]
+  recipe[rsync]
 )
 
 override_attributes(
