@@ -2,7 +2,9 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apt (2.2.1)
+    postfix (3.0.2)
 
 DEPENDENCIES
   apt (>= 0)
+  postfix (>= 0)
 
