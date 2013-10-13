@@ -1,5 +1,7 @@
 name "base"
 run_list %W(
+  recipe[chef-solo-search]
+  recipe[user::data_bag]
   recipe[apt]
   recipe[postfix]
   recipe[openssh]

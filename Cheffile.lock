@@ -23,6 +23,13 @@ SITE
     zsh (1.0.0)
 
 GIT
+  remote: git://github.com/edelight/chef-solo-search.git
+  ref: master
+  sha: 681f78a108f5f8a3655551b32d9939603628c568
+  specs:
+    chef-solo-search (0.5.1)
+
+GIT
   remote: git://github.com/firstbanco/chef-unattended-upgrades.git
   ref: master
   sha: 24cf40f5743fac8e7814e58cc8e3dde2f1ca2de9
@@ -30,8 +37,16 @@ GIT
     unattended-upgrades (1.0.0)
       apt (>= 0.0.0)
 
+GIT
+  remote: git://github.com/fnichol/chef-user.git
+  ref: master
+  sha: ce45d05e13491a82cbb5a2c36292391f3a1aaa36
+  specs:
+    user (0.3.1)
+
 DEPENDENCIES
   apt (>= 0)
+  chef-solo-search (>= 0)
   fail2ban (>= 0)
   htop (>= 0)
   logrotate (>= 0)
@@ -43,6 +58,7 @@ DEPENDENCIES
   sysctl (>= 0)
   ufw (>= 0)
   unattended-upgrades (>= 0)
+  user (>= 0)
   vim (>= 0)
   zsh (>= 0)
 
