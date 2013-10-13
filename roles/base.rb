@@ -9,6 +9,7 @@ run_list %W(
   recipe[rsync]
   recipe[htop]
   recipe[logrotate]
+  recipe[fail2ban]
 )
 
 override_attributes(

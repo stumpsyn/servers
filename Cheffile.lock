@@ -2,6 +2,8 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apt (2.2.1)
+    fail2ban (1.2.4)
+      yum (>= 0.0.0)
     htop (1.1.0)
       yum (>= 0.0.0)
     iptables (0.12.0)
@@ -17,6 +19,7 @@ SITE
 
 DEPENDENCIES
   apt (>= 0)
+  fail2ban (>= 0)
   htop (>= 0)
   logrotate (>= 0)
   ntp (>= 0)
