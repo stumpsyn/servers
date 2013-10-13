@@ -8,6 +8,7 @@ run_list %W(
   recipe[zsh]
   recipe[rsync]
   recipe[htop]
+  recipe[logrotate]
 )
 
 override_attributes(
