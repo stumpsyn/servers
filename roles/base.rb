@@ -11,6 +11,7 @@ run_list %W(
   recipe[logrotate]
   recipe[fail2ban]
   recipe[sudo]
+  recipe[unattended-upgrades]
 )
 
 override_attributes(

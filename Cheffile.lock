@@ -18,6 +18,14 @@ SITE
     yum (2.3.4)
     zsh (1.0.0)
 
+GIT
+  remote: git://github.com/firstbanco/chef-unattended-upgrades.git
+  ref: master
+  sha: 24cf40f5743fac8e7814e58cc8e3dde2f1ca2de9
+  specs:
+    unattended-upgrades (1.0.0)
+      apt (>= 0.0.0)
+
 DEPENDENCIES
   apt (>= 0)
   fail2ban (>= 0)
@@ -28,6 +36,7 @@ DEPENDENCIES
   postfix (>= 0)
   rsync (>= 0)
   sudo (>= 0)
+  unattended-upgrades (>= 0)
   vim (>= 0)
   zsh (>= 0)
 
