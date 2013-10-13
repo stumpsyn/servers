@@ -5,6 +5,7 @@ run_list %W(
   recipe[openssh]
   recipe[ntp]
   recipe[vim]
+  recipe[zsh]
 )
 
 override_attributes(

@@ -8,6 +8,7 @@ SITE
       iptables (>= 0.0.0)
     postfix (3.0.2)
     vim (1.0.2)
+    zsh (1.0.0)
 
 DEPENDENCIES
   apt (>= 0)
@@ -15,4 +16,5 @@ DEPENDENCIES
   openssh (>= 0)
   postfix (>= 0)
   vim (>= 0)
+  zsh (>= 0)
 
