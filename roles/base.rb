@@ -3,6 +3,7 @@ run_list %W(
   recipe[apt]
   recipe[postfix]
   recipe[openssh]
+  recipe[ntp]
 )
 
 override_attributes(
