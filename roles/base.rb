@@ -10,11 +10,20 @@ run_list %W(
   recipe[htop]
   recipe[logrotate]
   recipe[fail2ban]
+  recipe[sudo]
 )
 
 override_attributes(
-  'openssh' => {
-    'permit_root_login' => 'no',
-    'password_authentication' => 'no'
+  :openssh => {
+    :permit_root_login => 'no',
+    :password_authentication => 'no'
+  },
+  :authorization => {
+    :sudo => {
+      :groups => %w(admin),
+      :passwordless => true,
+      :agent_forwarding => true,
+      :include_sudoers_d => true
+    }
   }
 )
