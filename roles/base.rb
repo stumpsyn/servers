@@ -13,6 +13,7 @@ run_list %W(
   recipe[sudo]
   recipe[unattended-upgrades]
   recipe[ufw]
+  recipe[shm_noexec]
 )
 
 default_attributes(
