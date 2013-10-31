@@ -3,8 +3,10 @@
 
 site 'http://community.opscode.com/api/v1'
 
+# Chef Enhancements
 cookbook 'chef-solo-search', git: 'git://github.com/edelight/chef-solo-search.git'
 
+# Base
 cookbook 'apt'
 cookbook 'fail2ban'
 cookbook 'htop'
@@ -20,3 +22,6 @@ cookbook 'unattended-upgrades', git: 'git://github.com/firstbanco/chef-unattende
 cookbook 'user', git: 'git://github.com/fnichol/chef-user.git'
 cookbook 'vim'
 cookbook 'zsh'
+
+# Web
+cookbook 'nginx'
