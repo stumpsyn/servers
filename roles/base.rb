@@ -1,22 +1,22 @@
 name "base"
 run_list %W(
   recipe[chef-solo-search]
-  recipe[user::data_bag]
   recipe[apt]
+  recipe[unattended-upgrades]
+  recipe[ntp]
+  recipe[sudo]
+  recipe[user::data_bag]
   recipe[postfix]
   recipe[openssh]
-  recipe[ntp]
+  recipe[logrotate]
+  recipe[fail2ban]
+  recipe[ufw]
+  recipe[shm_noexec]
+  recipe[sysctl]
   recipe[vim]
   recipe[zsh]
   recipe[rsync]
   recipe[htop]
-  recipe[logrotate]
-  recipe[fail2ban]
-  recipe[sudo]
-  recipe[unattended-upgrades]
-  recipe[ufw]
-  recipe[shm_noexec]
-  recipe[sysctl]
 )
 
 default_attributes(
