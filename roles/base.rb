@@ -12,9 +12,10 @@ run_list %W(
   recipe[fail2ban]
   recipe[sudo]
   recipe[unattended-upgrades]
+  recipe[ufw]
 )
 
-override_attributes(
+default_attributes(
   :openssh => {
     :permit_root_login => 'no',
     :password_authentication => 'no'
@@ -26,5 +27,9 @@ override_attributes(
       :agent_forwarding => true,
       :include_sudoers_d => true
     }
+  },
+  :firewall => {
+    :rules => [
+    ]
   }
 )
