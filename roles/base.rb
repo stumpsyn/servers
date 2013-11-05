@@ -13,6 +13,7 @@ run_list %W(
   recipe[ufw]
   recipe[shm_noexec]
   recipe[sysctl]
+  recipe[git]
   recipe[vim]
   recipe[zsh]
   recipe[rsync]

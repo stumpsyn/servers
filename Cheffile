@@ -9,6 +9,7 @@ cookbook 'chef-solo-search', git: 'git://github.com/edelight/chef-solo-search.gi
 # Base
 cookbook 'apt'
 cookbook 'fail2ban'
+cookbook 'git'
 cookbook 'htop'
 cookbook 'logrotate'
 cookbook 'ntp'
