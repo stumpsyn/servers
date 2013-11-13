@@ -22,6 +22,7 @@ cookbook 'ufw'
 cookbook 'unattended-upgrades', git: 'git://github.com/firstbanco/chef-unattended-upgrades.git'
 cookbook 'user', git: 'git://github.com/fnichol/chef-user.git'
 cookbook 'vim'
+cookbook 'xml'
 cookbook 'zsh'
 
 # Web

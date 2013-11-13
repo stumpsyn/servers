@@ -1,8 +1,9 @@
 name "calagator"
 run_list %W(
   role[web]
-  recipe[sqlite]
   recipe[ruby_install]
+  recipe[xml]
+  recipe[sqlite]
   recipe[calagator]
 )
 
