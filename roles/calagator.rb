@@ -4,6 +4,7 @@ run_list %W(
   recipe[ruby_install]
   recipe[xml]
   recipe[sqlite]
+  recipe[sqlite-dev]
   recipe[calagator]
 )
 
