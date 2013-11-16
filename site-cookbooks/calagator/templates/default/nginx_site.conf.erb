@@ -1,0 +1,54 @@
+upstream <%= @app_name %> {
+  server <%= "unix://#{@shared_path}/tmp/sockets/puma.sock" %>;
+}
+
+server {
+  listen 80;
+  listen [::]:80 ipv6only=on;
+  listen 443 ssl;
+  listen [::]:443 ipv6only=on ssl;
+
+  server_name <%= "#{@app_name}.local" %>;
+
+  keepalive_timeout 10;
+
+  root <%= "#{@deploy_path}/current/public" %>;
+
+  access_log <%= "#{@shared_path}/log/#{@app_name}.nginx.access.log" %>;
+  error_log  <%= "#{@shared_path}/log/#{@app_name}.nginx.error.log" %> info;
+
+  try_files $uri/index.html $uri @rails_app;
+
+  if (-f $document_root/maintenance.html) {
+    rewrite  ^(.*)$  /maintenance.html last;
+    break;
+  }
+
+  location ~ ^/(assets)/  {
+    root <%= "#{@deploy_path}/current/public" %>;
+    expires max;
+    add_header  Cache-Control public;
+  }
+
+  location @rails_app {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+
+    proxy_pass http://<%= @app_name %>;
+  }
+
+  location ~* \.(ico|css|gif|jpe?g|png)(\?[0-9]+)?$ {
+     expires max;
+     break;
+  }
+
+  location ~ ^/javascripts/.*\.js(\?[0-9]+)?$ {
+     expires max;
+     break;
+  }
+
+  error_page 500 504 /500.html;
+  error_page 502 /502.html;
+  error_page 503 /503.html;
+}

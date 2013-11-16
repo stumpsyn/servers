@@ -4,13 +4,15 @@
 #
 
 include_recipe "user"
-include_recipe "ruby_install"
 
+# Load configuration and set defaults
 calagator = node['calagator']
 
 ruby_path = "/opt/rubies/#{calagator['ruby_version'].gsub(' ', '-')}"
-user_name = calagator['user'] || calagator['app_name']
+app_name = calagator['app_name']
+user_name = calagator['user'] || app_name
 deploy_path = calagator['deploy_path'] || "/var/www/#{calagator['app_name']}"
+shared_path = File.join(deploy_path, 'shared')
 user_home = calagator['user_home'] || deploy_path
 
 # Install the desired ruby version
@@ -26,6 +28,20 @@ end
 # Create the user
 user_account user_name do
   home user_home
+  ssh_keys calagator['ssh_keys']
+end
+
+# Ensure the shared path and log dir exist
+directory File.join(shared_path, "log") do
+  owner user_name
+  mode "0775"
+  recursive true
+end
+
+# Link the installed ruby into the shared path
+link File.join(shared_path, "ruby") do
+  owner user_name
+  to ruby_path
 end
 
 # Add the installed ruby to the user's PATH
@@ -34,7 +50,22 @@ file File.join(user_home, ".bashrc") do
   mode "0644"
   content [
     File.read("/etc/skel/.bashrc"),
-    "export PATH=#{ruby_path}/bin:$PATH"
+    "export PATH=#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH"
   ].join("\n")
 end
 
+# Generate nginx config
+template "/etc/nginx/sites-available/#{app_name}.conf" do
+  source "nginx_site.conf.erb"
+  mode 0644
+  owner "root"
+  group "root"
+  variables(
+    app_name: app_name,
+    deploy_path: deploy_path,
+    shared_path: shared_path
+  )
+  notifies :reload, "service[nginx]"
+end
+
+nginx_site "#{app_name}.conf"
