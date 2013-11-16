@@ -50,7 +50,7 @@ file File.join(user_home, ".bashrc") do
   mode "0644"
   content [
     File.read("/etc/skel/.bashrc"),
-    "export PATH=#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH"
+    "export PATH=#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH:/sbin"
   ].join("\n")
 end
 
@@ -69,3 +69,33 @@ template "/etc/nginx/sites-available/#{app_name}.conf" do
 end
 
 nginx_site "#{app_name}.conf"
+
+service_name = "#{app_name}_puma"
+
+# Generate upstart script to run the app
+template "/etc/init/#{service_name}.conf" do
+  source "upstart_puma.conf.erb"
+  mode 0644
+  owner "root"
+  group "root"
+  variables(
+    app_name: app_name,
+    deploy_path: deploy_path,
+    shared_path: shared_path,
+    user: user_name
+  )
+end
+
+# Let the user sudo to control the service
+sudo user_name do
+  user user_name
+  runas 'root'
+  nopasswd true
+  commands [
+    "/sbin/start #{service_name}",
+    "/sbin/stop #{service_name}",
+    "/sbin/restart #{service_name}",
+    "/sbin/reload #{service_name}"
+  ]
+end
+

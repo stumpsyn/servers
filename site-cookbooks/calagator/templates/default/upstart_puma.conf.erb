@@ -1,0 +1,16 @@
+description "Puma server for <%= @app_name %>"
+
+start on runlevel [2345]
+stop on runlevel [06]
+
+setuid <%= @user %>
+setgid <%= @user %>
+
+respawn
+respawn limit 3 30
+
+expect daemon
+
+env PATH=<%= "#{@shared_path}/ruby/bin:#{@shared_path}/bin:$PATH" %>
+chdir <%= "#{@deploy_path}/current" %>
+exec puma -C <%= "#{@shared_path}/config/puma.rb" %>
