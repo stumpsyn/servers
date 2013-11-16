@@ -5,12 +5,17 @@ run_list %W(
   recipe[xml]
   recipe[sqlite]
   recipe[sqlite-dev]
-  recipe[calagator]
+  recipe[puma_app]
 )
 
 override_attributes(
   ruby_install: { 
     version: "0.3.1",
+  },
+  puma_app: {
+    apps: [
+      'calagator'
+    ]
   }
 )
 
