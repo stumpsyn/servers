@@ -91,6 +91,14 @@ apps.each do |app_to_load|
     ].join("\n")
   end
 
+  # Generate the puma config
+  template puma_config_path do
+    source "puma_config.rb.erb"
+    owner user_name
+    mode "0644"
+    variables template_context
+  end
+
   # Generate nginx config
   template "/etc/nginx/sites-available/#{app_name}.conf" do
     source "nginx_site.conf.erb"
