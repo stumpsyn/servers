@@ -1,5 +1,5 @@
 upstream <%= @app_name %> {
-  server <%= "unix://#{@shared_path}/tmp/sockets/puma.sock" %>;
+  server <%= @puma_bind %>;
 }
 
 server {
@@ -12,7 +12,7 @@ server {
 
   keepalive_timeout 10;
 
-  root <%= "#{@deploy_path}/current/public" %>;
+  root <%= "#{@current_path}/public" %>;
 
   access_log <%= "#{@shared_path}/log/#{@app_name}.nginx.access.log" %>;
   error_log  <%= "#{@shared_path}/log/#{@app_name}.nginx.error.log" %> info;
@@ -25,7 +25,7 @@ server {
   }
 
   location ~ ^/(assets)/  {
-    root <%= "#{@deploy_path}/current/public" %>;
+    root <%= "#{@current_path}/public" %>;
     expires max;
     add_header  Cache-Control public;
   }

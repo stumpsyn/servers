@@ -20,11 +20,35 @@ apps.each do |app_to_load|
   end
 
   ruby_path = "/opt/rubies/#{app['ruby_version'].gsub(' ', '-')}"
+
   app_name = app['id']
-  user_name = app['user'] || app_name
+
   deploy_path = app['deploy_path'] || "/var/www/#{app_name}"
   shared_path = File.join(deploy_path, 'shared')
+  current_path = File.join(deploy_path, 'current')
+
+  user_name = app['user'] || app_name
   user_home = app['user_home'] || deploy_path
+
+  puma_env = app['environment'] || 'production'
+  puma_threads = app['threads'] || [0, 16]
+  puma_workers = app['workers'] || 0
+  puma_bind = app['bind'] || "unix://#{shared_path}/tmp/sockets/puma.sock"
+
+  puma_config_path = app['config_path'] || File.join(shared_path, 'config', 'puma.rb')
+
+  template_context = {
+    app_name: app_name,
+    deploy_path: deploy_path,
+    shared_path: shared_path,
+    current_path: current_path,
+    user: user_name,
+    puma_env: puma_env,
+    puma_threads: puma_threads,
+    puma_workers: puma_workers,
+    puma_bind: puma_bind,
+    puma_config_path: puma_config_path
+  }
 
   # Install the desired ruby version
   ruby_install_ruby app["ruby_version"] do
@@ -73,17 +97,13 @@ apps.each do |app_to_load|
     mode 0644
     owner "root"
     group "root"
-    variables(
-      app_name: app_name,
-      deploy_path: deploy_path,
-      shared_path: shared_path
-    )
+    variables template_context
     notifies :reload, "service[nginx]"
   end
 
   nginx_site "#{app_name}.conf"
 
-  service_name = "#{app_name}_puma"
+  service_name = app_name
 
   # Generate upstart script to run the app
   template "/etc/init/#{service_name}.conf" do
@@ -91,12 +111,7 @@ apps.each do |app_to_load|
     mode 0644
     owner "root"
     group "root"
-    variables(
-      app_name: app_name,
-      deploy_path: deploy_path,
-      shared_path: shared_path,
-      user: user_name
-    )
+    variables template_context
   end
 
   # Let the user sudo to control the service
