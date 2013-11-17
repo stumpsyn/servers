@@ -42,11 +42,13 @@ apps.each do |app_to_load|
     ssh_keys app['ssh_keys']
   end
 
-  # Ensure the shared path and log dir exist
-  directory File.join(shared_path, "log") do
-    owner user_name
-    mode "0775"
-    recursive true
+  # Ensure the shared path, config, pids, and log dirs exist
+  %w(shared shared/log shared/config shared/tmp shared/tmp/pids).each do |subdir|
+    directory File.join(deploy_path, subdir) do
+      owner user_name
+      mode "0775"
+      recursive true
+    end
   end
 
   # Link the installed ruby into the shared path
