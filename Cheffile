@@ -28,6 +28,14 @@ cookbook 'zsh'
 # Web
 cookbook 'nginx'
 
+# Puma App
+cookbook 'ruby_install', git: 'https://github.com/rosstimson/chef-ruby_install.git'
+
 # Calagator
 cookbook 'sqlite'
-cookbook 'ruby_install', git: 'https://github.com/rosstimson/chef-ruby_install.git'
+# cookbook 'hipsnip-solr', git: 'https://github.com/hipsnip-cookbooks/solr.git'
+
+# Temporarily use my fork of hipsnip-solr, pending:
+# - https://github.com/hipsnip-cookbooks/solr/pull/5
+# - https://github.com/hipsnip-cookbooks/solr/pull/6
+cookbook 'hipsnip-solr', git: 'https://github.com/reidab/solr.git', ref: 'both_fixes'
