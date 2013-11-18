@@ -22,6 +22,8 @@ apps.each do |app_to_load|
   ruby_path = "/opt/rubies/#{app['ruby_version'].gsub(' ', '-')}"
 
   app_name = app['id']
+  domains = app['domains'] || []
+  domains << "#{app_name}.local"
 
   deploy_path = app['deploy_path'] || "/var/www/#{app_name}"
   shared_path = File.join(deploy_path, 'shared')
@@ -39,6 +41,7 @@ apps.each do |app_to_load|
 
   template_context = {
     app_name: app_name,
+    domains: domains,
     deploy_path: deploy_path,
     shared_path: shared_path,
     current_path: current_path,
