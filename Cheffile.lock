@@ -82,7 +82,7 @@ GIT
 GIT
   remote: https://github.com/reidab/solr.git
   ref: both_fixes
-  sha: 89be438560174c865f9a7a5587aa367e13bb9a6d
+  sha: 15c0e60eff90940d278d3e768f652b4fd782f6c0
   specs:
     hipsnip-solr (0.4.2)
       hipsnip-jetty (~> 0.9.0)
