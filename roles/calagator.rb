@@ -7,6 +7,8 @@ run_list %W(
   recipe[sqlite-dev]
   recipe[puma_app]
   recipe[hipsnip-solr]
+  recipe[solr-cores]
+  recipe[solr-cores::sunspot_schema]
 )
 
 override_attributes(
@@ -24,6 +26,7 @@ override_attributes(
   solr: {
     version: '4.5.1',
     checksum: '8726fa10c6b92aa1d2235768092ee2d4cd486eea1738695f91b33c3fd8bc4bd7',
+    cores: %w(calagator_production)
   },
   jetty: {
     port: 8983,
