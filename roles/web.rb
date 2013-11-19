@@ -3,6 +3,7 @@ run_list %W(
   role[base]
   recipe[nginx::repo]
   recipe[nginx]
+  recipe[server-banner]
 )
 
 override_attributes(

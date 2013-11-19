@@ -1,5 +1,12 @@
 {
   "run_list": [
     "role[calagator]"
-  ]
+  ],
+  "server-banner": {
+    "domain": "lucca.stumptownsyndicate.org",
+    "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#lucca.stumptownsyndicate.org",
+    "image": "lucca.gif",
+    "background_color": "#a9856a",
+    "text_color": "#d0a484"
+  }
 }

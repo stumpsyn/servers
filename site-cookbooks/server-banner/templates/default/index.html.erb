@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @server_name %></title>
+    <link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        background: <%= @background_color %>;
+        color: <%= @text_color %>;
+        font-family: 'Cherry Swash', cursive;
+        text-align: center;
+      }
+      a { 
+        color: inherit; 
+        text-decoration: none;
+      }
+      img {
+        margin: 20% auto 0;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="<%= @link %>">
+      <%= "<img src='#{@image}' />" if @image %>
+      <h1><%= @server_name %></h1>
+    </a>
+  </body>
+</html>
