@@ -1,4 +1,6 @@
-directory "/var/www/server-banner"
+directory "/var/www/server-banner" do
+  recursive true
+end
 
 image = node['server-banner']['image']
 if image

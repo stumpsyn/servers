@@ -10,7 +10,8 @@ You can easily download the Ubuntu 12.04 base box and build an initial VM with `
     
 You'll then want to dump vagrant's SSH config to a file, so you can reference it when provisioning later on. You should only need to update this file when adding new VMs to the Vagrantfile.
 
-    $ vagrant ssh-config > vagrant_ssh_config
+    $ vagrant ssh-config lucca.local > vagrant_ssh_config
+    $ vagrant ssh-config bunsen.local >> vagrant_ssh_config
 
 You can then install chef on the VM using:
 

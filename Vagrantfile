@@ -9,29 +9,32 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.box = "ubuntu-12.04-server"
+
   config.vm.define "lucca.local" do |web|
-    # Every Vagrant virtual environment requires a box to build off of.
-    web.vm.box = "ubuntu-12.04-server"
-
-    # The url from where the 'config.vm.box' box will be fetched if it
-    # doesn't already exist on the user's system.
-    web.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
-
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
-    web.vm.network :forwarded_port, guest: 80, host: 8080
-    web.vm.network :forwarded_port, guest: 443, host: 4433
+    web.vm.network :forwarded_port, guest: 80, host: 8001
+    web.vm.network :forwarded_port, guest: 443, host: 4431
     web.vm.network :forwarded_port, guest: 8983, host: 8983
 
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
     web.vm.network :private_network, ip: "192.168.33.10"
+  end
 
-    # Create a public network, which generally matched to bridged network.
-    # Bridged networks make the machine appear as another physical device on
-    # your network.
-    # web.vm.network :public_network
+  config.vm.define "bunsen.local" do |web|
+    # Create a forwarded port mapping which allows access to a specific port
+    # within the machine from a port on the host machine. In the example below,
+    # accessing "localhost:8080" will access port 80 on the guest machine.
+    web.vm.network :forwarded_port, guest: 80, host: 8002
+    web.vm.network :forwarded_port, guest: 443, host: 4432
+
+    # Create a private network, which allows host-only access to the machine
+    # using a specific IP.
+    web.vm.network :private_network, ip: "192.168.33.11"
   end
 
   # If true, then any SSH connections made will enable agent forwarding.

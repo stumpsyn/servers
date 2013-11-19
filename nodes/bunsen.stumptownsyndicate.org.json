@@ -1,0 +1,12 @@
+{
+  "run_list": [
+    "role[web]"
+  ],
+  "server-banner": {
+    "domain": "bunsen.stumptownsyndicate.org",
+    "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#bunsen.stumptownsyndicate.org",
+    "image": "bunsen.jpg",
+    "background_color": "#fff",
+    "text_color": "#f2cf54"
+  }
+}
