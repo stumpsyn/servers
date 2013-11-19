@@ -1,0 +1,9 @@
+{
+  "id": "christie",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyw68n1UvDaGgUg7F29FnfIcLSfc0FArKrd+HOBtmiGpbU6MqnRA4kO/ik7GMP4YlGw3Br+j5nTlYGWhGWwu5VYQYloXECbhTb0Dwh4yRAKJdGlbvvsO8gZSz+/yyVxe+pHd7QnYwuCgZCkcfUafNgmxKjFefL4oQkBEwxK8wBgXb6Lm2k7jNM4wPWcekh//zIOyZ6b2WW3snQ41IZ56PRrTzoNTaGKTaCdJwesMF+n7hcZbk+Wf1yVr3Q5QIAw/aw+bMt/yxjnmBXImyfriy0rDDVYq8gHjvQHbMmiSLgGqOEnBRqgMdblHj8cCSK3Nrfj8nCItIX2x3IoL64G8l4Q== christiekoehler@gmail.com",
+    "ssh-dss AAAAB3NzaC1kc3MAAACBAJI+73ZBhpVsiuOohROV0WvGtY8JM4xKxURr8llSJ+f5mGCWTAW2wgtP+ndl2nLuRapa/Ao+DkRqu0fAPUvahnvphtEoT4qOhk6bqKzUv51wep6gSueqf2A8u19PeTsRhgZIzENx16jAUKKCWBuViWrdojoPiHBr1o7kDU/McPpDAAAAFQDa8RGB1cHROC0PVtz4mze9EZrlSQAAAIBfeUbVcE7/FqwdLRUAUN1nymxqmaLN20MwwpH7n2C7vhIvGFOkUyHrFxrma9XikVjlJgnrqkGIhiFA+zRQnhKBlHSXD1GX3FYDDjBqgXY/27IZ+GgeDtCVETmfrKAAq8m7CWrv1OwSmIxS9bHgWbefnkbKKLv+Bj3oUEvS3msf8AAAAIAQGcAa1uadluIzJYed3xFJxD8URtW2/ByKc11ewT/SCsTTYikXksMezUnfqEID5C3xvoqqu+BJcLJC7VL05N7GMdduQLoUj3g8TBWBagclQaWTu6II8wlvovf5Xgb0OsYdnpeJhIZfZq1Q7deGMrC6L5/UfANDlpNNVXYxurtYig== christiekoehler@gmail.com"
+  ],
+  "groups": ["admin", "deploy"],
+  "shell": "\/bin\/bash"
+}

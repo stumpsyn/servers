@@ -21,7 +21,7 @@ run_list %W(
 )
 
 default_attributes(
-  :users => ["reidab"],
+  :users => ["aeschright", "christie", "kirsten", "reidab"],
   :openssh => {
     :permit_root_login => 'no',
     :password_authentication => 'no'

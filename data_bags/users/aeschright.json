@@ -1,0 +1,9 @@
+{
+  "id": "aeschright",
+  "ssh_keys": [
+    "ssh-dss AAAAB3NzaC1kc3MAAACBAJGOyiLNR7atQ5U9OI9sXDZB0WrmxHzimaI4qU0qxJWN5NLppMLplMLucVJCzocGTpsjdUFGm1/OCZ9VWEbnoJ7a7SZJvc5KqI1V/UY6Om2uOHq/uMDRK199pJQxjy1ia2s7KkKLyrrZhPMdkgdHKcOOakEcaUY5v6hvNED6KBE1AAAAFQCplhkr/tLT5X6NGFpssoyyUPCFvQAAAIAHZWBCazU55KyRACuo5m89dDatoqkcvesdji/bGb4KfWZnEnv1gMvai+5jl3faJf1xKNDX6XxYnDmAeV6wGgSh/rrjllBULbqnFbRMdnxhgRln7Jv1d+szJZsfu00hVsaienolkqh/ref0Ta08gzfmXLfLI46LNEv3Gq8QVyEPggAAAIB+1i0GHdDP06gAXBDw33lkD62h0bvQuakmo9OPeUJS8pq/L8bnWC/oVWVAbUMH1KcyxSvIY4G7GYLnmwbiR/sTLc6/0uawZ5fcp/DL2sC8ADxqfgtYTTuFWN2ciye4OuA1M45KkzHzRU6F/7IVxOvPnYssPGas10QtAVFsCtn4yw=="
+  ],
+  "groups": ["admin", "deploy"],
+  "shell": "\/bin\/bash"
+}
+
