@@ -2,3 +2,4 @@
 .vagrant
 vagrant_ssh_config
 tmp/
+secret_key
