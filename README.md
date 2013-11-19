@@ -1,6 +1,6 @@
 # Stumptown Syndicate Servers
 
-[Chef](http://www.opscode.com/chef/) cookbooks and configuration for servers run by [Stumptown Syndicate](http://stumptownsyndicate.org).
+[Chef](http://www.opscode.com/chef/) cookbooks and configuration for servers run by [Stumptown Syndicate](http://stumptownsyndicate.org). For more information about these servers, consult the [Server Notes](http://stumptownsyndicate.org/wiki/Tech/Server_Notes) on the wiki.
 
 ## Local Development & Testing
 
@@ -23,3 +23,9 @@ and apply the configuration with:
 or combine the previous two commands with:
 
     $ knife solo bootstrap lucca.local -F vagrant_ssh_config
+
+## Configuring Actual Servers
+
+If you have sufficient access to the target server, you can apply the configuration using:
+
+    $ knife solo cook lucca.stumptownsyndicate.org
