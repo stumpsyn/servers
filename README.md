@@ -14,12 +14,12 @@ You'll then want to dump vagrant's SSH config to a file, so you can reference it
 
 You can then install chef on the VM using:
 
-    $ knife solo prepare syndicate_web.local -F vagrant_ssh_config
+    $ knife solo prepare lucca.local -F vagrant_ssh_config
 
 and apply the configuration with:
 
-    $ knife solo cook syndicate_web.local -F vagrant_ssh_config
+    $ knife solo cook lucca.local -F vagrant_ssh_config
 
 or combine the previous two commands with:
 
-    $ knife solo bootstrap syndicate_web.local -F vagrant_ssh_config
+    $ knife solo bootstrap lucca.local -F vagrant_ssh_config
