@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.define "syndicate_web.local" do |web|
+  config.vm.define "lucca.local" do |web|
     # Every Vagrant virtual environment requires a box to build off of.
     web.vm.box = "ubuntu-12.04-server"
 
@@ -22,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # accessing "localhost:8080" will access port 80 on the guest machine.
     web.vm.network :forwarded_port, guest: 80, host: 8080
     web.vm.network :forwarded_port, guest: 443, host: 4433
+    web.vm.network :forwarded_port, guest: 8983, host: 8983
 
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
