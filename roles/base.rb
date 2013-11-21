@@ -27,6 +27,7 @@ default_attributes(
       {name: "htop"},
       {name: "ntop"},
       {name: "iotop"},
+      {name: "elinks"},
       {name: "tree"}
     ]
   },
