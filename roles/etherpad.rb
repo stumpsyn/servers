@@ -1,6 +1,7 @@
 name "etherpad"
 run_list %W(
   role[web]
+  recipe[secrets]
   recipe[nodejs]
   recipe[postgresql]
   recipe[postgresql::server]
@@ -8,7 +9,7 @@ run_list %W(
 )
 
 default_attributes(
-  #secrets: ["postgresql", "etherpad-lite"],
+  secrets: ["etherpad-lite"],
   users: ["etherpad"],
   platform_packages: {
     pkgs: [
@@ -33,6 +34,9 @@ default_attributes(
     logs_dir: "/var/log/etherpad",
     admin_enabled: true,
     plugins: ["mediawiki", "markdownify"]
+    # Set by the secrets recipe, from data_bags/secrets/etherpad-lite.json
+    # session_key: "SECRET!",
+    # admin_password: "SECRET!"
   },
   postgresql: {
     users: [
