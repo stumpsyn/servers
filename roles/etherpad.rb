@@ -33,7 +33,7 @@ default_attributes(
     abiword_path: "/usr/bin/abiword",
     logs_dir: "/var/log/etherpad",
     admin_enabled: true,
-    plugins: ["mediawiki", "markdownify"]
+    plugins: ["mediawiki", "markdownify", "adminpads", "ether-o-meter", "scrollto", "table_of_contents"]
     # Set by the secrets recipe, from data_bags/secrets/etherpad-lite.json
     # session_key: "SECRET!",
     # admin_password: "SECRET!"
