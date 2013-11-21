@@ -4,7 +4,6 @@ run_list %W(
   recipe[ruby_install]
   recipe[xml]
   recipe[sqlite]
-  recipe[sqlite-dev]
   recipe[puma_app]
   recipe[hipsnip-solr]
   recipe[solr-cores]
@@ -12,6 +11,11 @@ run_list %W(
 )
 
 override_attributes(
+  platform_packages: {
+    pkgs: [
+      {name: "libsqlite3-dev"}
+    ]
+  },
   ruby_install: { 
     version: "0.3.1",
   },

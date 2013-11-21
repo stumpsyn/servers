@@ -13,15 +13,23 @@ run_list %W(
   recipe[ufw]
   recipe[shm_noexec]
   recipe[sysctl]
-  recipe[git]
-  recipe[vim]
   recipe[zsh]
-  recipe[rsync]
-  recipe[htop]
+  recipe[platform_packages]
 )
 
 default_attributes(
   :users => ["aeschright", "christie", "kirsten", "reidab"],
+  :platform_packages => {
+    :pkgs => [
+      {name: "git-core"},
+      {name: "vim"},
+      {name: "rsync"},
+      {name: "htop"},
+      {name: "ntop"},
+      {name: "iotop"},
+      {name: "tree"}
+    ]
+  },
   :openssh => {
     :permit_root_login => 'no',
     :password_authentication => 'no'
