@@ -27,6 +27,12 @@ SITE
       ohai (~> 1.1)
       runit (~> 1.2)
       yum (~> 2.3)
+    nodejs (1.3.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    npm (0.1.2)
+      nodejs (>= 0.0.0)
     ntp (1.5.0)
     ohai (1.1.12)
     openssh (1.3.0)
@@ -72,6 +78,25 @@ GIT
     user (0.3.1)
 
 GIT
+  remote: https://github.com/phlipper/chef-postgresql.git
+  ref: master
+  sha: fc8c96d9ebccca9afb76f5c66ce15ebcd2965626
+  specs:
+    postgresql (0.13.0)
+      apt (>= 1.9.0)
+
+GIT
+  remote: https://github.com/reidab/etherpad-lite-cookbook.git
+  ref: all_fixes
+  sha: 5cdc40c91059281b897742fc5650a094fb2132cb
+  specs:
+    etherpad-lite (0.1.1)
+      nginx (>= 0.0.0)
+      nodejs (>= 0.0.0)
+      npm (>= 0.0.0)
+      postgresql (>= 0.0.0)
+
+GIT
   remote: https://github.com/reidab/solr.git
   ref: both_fixes
   sha: 15c0e60eff90940d278d3e768f652b4fd782f6c0
@@ -92,14 +117,18 @@ GIT
 DEPENDENCIES
   apt (>= 0)
   chef-solo-search (>= 0)
+  etherpad-lite (>= 0)
   fail2ban (>= 0)
   hipsnip-solr (>= 0)
   htop (>= 0)
   logrotate (>= 0)
   nginx (>= 0)
+  nodejs (>= 0)
   ntp (>= 0)
   openssh (>= 0)
+  platform_packages (>= 0)
   postfix (>= 0)
+  postgresql (>= 0)
   ruby_install (>= 0)
   sqlite (>= 0)
   sudo (>= 0)

@@ -37,3 +37,14 @@ cookbook 'sqlite'
 # - https://github.com/hipsnip-cookbooks/solr/pull/5
 # - https://github.com/hipsnip-cookbooks/solr/pull/6
 cookbook 'hipsnip-solr', git: 'https://github.com/reidab/solr.git', ref: 'both_fixes'
+
+# Etherpad
+# Temporarily use my fork of etherpad-lite-cookbook, pending:
+# - https://github.com/OpenWatch/etherpad-lite-cookbook/pull/2
+# - https://github.com/OpenWatch/etherpad-lite-cookbook/pull/3
+# - https://github.com/OpenWatch/etherpad-lite-cookbook/pull/4
+# - https://github.com/OpenWatch/etherpad-lite-cookbook/pull/5
+# - https://github.com/OpenWatch/etherpad-lite-cookbook/pull/6
+cookbook 'etherpad-lite', git: 'https://github.com/reidab/etherpad-lite-cookbook.git', ref: 'all_fixes'
+cookbook 'postgresql', git: 'https://github.com/phlipper/chef-postgresql.git'
+cookbook 'nodejs'
