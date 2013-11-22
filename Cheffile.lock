@@ -8,6 +8,7 @@ SITE
       rsyslog (>= 0.0.0)
     build-essential (1.4.2)
     chef_handler (1.1.4)
+    cron (1.2.8)
     fail2ban (1.2.4)
       yum (>= 0.0.0)
     firewall (0.11.2)
@@ -39,6 +40,9 @@ SITE
       iptables (>= 0.0.0)
     platform_packages (0.4.2)
     postfix (3.0.2)
+    python (1.4.4)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
     rsyslog (1.9.0)
     runit (1.3.0)
       build-essential (>= 0.0.0)
@@ -105,6 +109,17 @@ GIT
       hipsnip-jetty (~> 0.9.0)
 
 GIT
+  remote: https://github.com/reidab/znc.git
+  ref: master
+  sha: 48c837583ed4a436e3893d437c0c07692be0a54d
+  specs:
+    znc (0.0.1)
+      build-essential (>= 0.0.0)
+      cron (>= 0.0.0)
+      python (>= 0.0.0)
+      runit (>= 0.0.0)
+
+GIT
   remote: https://github.com/rosstimson/chef-ruby_install.git
   ref: master
   sha: 09e1930202ff237e28d5f44a3ec96ce5c4e1dc8d
@@ -137,5 +152,6 @@ DEPENDENCIES
   unattended-upgrades (>= 0)
   user (>= 0)
   xml (>= 0)
+  znc (>= 0)
   zsh (>= 0)
 

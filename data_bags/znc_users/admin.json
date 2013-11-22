@@ -1,0 +1,9 @@
+{
+    "id": "admin",
+    "nick": "znc_admin",
+    "real_name": "ZNC Admin",
+    "pass": "sha256#518385d7a46f2a095b4a4d8e2e6e05b5c1a047311ef7c215e3aef4a47892d407#Lwwkv4u*Mgw4J*_4o6cl#",
+    "buffer": 0,
+    "keep_buffer": false,
+    "admin": true
+}

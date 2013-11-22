@@ -1,7 +1,8 @@
 {
   "run_list": [
     "role[web]",
-    "role[etherpad]"
+    "role[etherpad]",
+    "role[znc_server]"
   ],
   "server-banner": {
     "domain": "bunsen.stumptownsyndicate.org",
