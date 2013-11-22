@@ -31,6 +31,10 @@ default_attributes(
       {name: "tree"}
     ]
   },
+  'unattended-upgrades' => {
+      :send_email => true,
+      :email_address => 'root@stumptownsyndicate.org'
+  },
   :openssh => {
     :permit_root_login => 'no',
     :password_authentication => 'no'
