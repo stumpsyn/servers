@@ -1,0 +1,40 @@
+{
+  "name": "znc_server",
+  "run_list": [
+    "recipe[znc]",
+    "recipe[znc::module_colloquy]",
+    "recipe[znc_nginx_conf]"
+  ],
+  "default_attributes": {
+    "platform_packages": {
+      "pkgs": [
+        { "name": "python3-dev" }
+      ]
+    },
+    "znc": {
+      "install_method": "source",
+      "url": "http://znc.in/nightly",
+      "version": "latest",
+      "configure_options": [ "--enable-python" ],
+      "init_style": "upstart",
+      "port": "+7777",
+      "modules": [
+        "webadmin",
+        "adminlog",
+        "fail2ban"
+      ],
+      "extra_conf": "// Set up a web-only non-SSL listener for nginx to proxy\n<Listener listener1>\n  AllowIRC = false\n  AllowWeb = true\n  IPv4 = true\n  IPv6 = true\n  Port = 7780\n  SSL = false\n</Listener>\n"
+    },
+    "znc_nginx_conf": {
+      "server_name": "znc.stumptownsyndicate.org",
+      "port": 7780
+    },
+    "firewall": {
+      "rules": [
+        { "znc": { "port": "7777" } }
+      ]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}

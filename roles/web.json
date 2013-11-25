@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "run_list": [
+    "role[base]",
+    "recipe[nginx::repo]",
+    "recipe[nginx]",
+    "recipe[server-banner]"
+  ],
+  "default_attributes": {
+    "nginx": {
+      "version": "1.5.6"
+    },
+    "firewall": {
+      "rules": [
+        {"http": { "port": "80" } },
+        {"https": { "port": "443" } }
+      ]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
