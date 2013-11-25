@@ -1,3 +1,5 @@
+name = node['server-banner']['domain'] || node['set_fqdn'] || node.name
+
 directory "/var/www/server-banner" do
   recursive true
 end
@@ -12,7 +14,7 @@ end
 template "/var/www/server-banner/index.html" do
   source "index.html.erb"
   variables(
-    server_name: node['server-banner']['domain'],
+    server_name: name,
     background_color: node['server-banner']['background_color'],
     text_color: node['server-banner']['text_color'],
     link: node['server-banner']['link'],
@@ -26,7 +28,7 @@ template "/etc/nginx/sites-available/server-banner" do
   owner "root"
   group "root"
   variables(
-    name: node['server-banner']['domain']
+    name: name
   )
   notifies :reload, "service[nginx]"
 end

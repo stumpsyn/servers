@@ -1,6 +1,7 @@
 name "base"
 run_list %W(
   recipe[chef-solo-search]
+  recipe[hostname]
   recipe[apt]
   recipe[unattended-upgrades]
   recipe[ntp]
@@ -31,6 +32,7 @@ default_attributes(
       {name: "tree"}
     ]
   },
+  set_fqdn_reload_method: "reload",
   'unattended-upgrades' => {
       :send_email => true,
       :email_address => 'root@stumptownsyndicate.org'

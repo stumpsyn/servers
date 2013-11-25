@@ -4,8 +4,8 @@
     "role[etherpad]",
     "role[znc_server]"
   ],
+  "set_fqdn": "bunsen.stumptownsyndicate.org",
   "server-banner": {
-    "domain": "bunsen.stumptownsyndicate.org",
     "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#bunsen.stumptownsyndicate.org",
     "image": "bunsen.jpg",
     "background_color": "#fff",

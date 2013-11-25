@@ -82,6 +82,13 @@ GIT
     user (0.3.1)
 
 GIT
+  remote: https://github.com/nickola/chef-hostname.git
+  ref: master
+  sha: e9bc75a59be6907bf7fe2bc701d2256fb4f841b7
+  specs:
+    hostname (1.0.0)
+
+GIT
   remote: https://github.com/phlipper/chef-postgresql.git
   ref: master
   sha: fc8c96d9ebccca9afb76f5c66ce15ebcd2965626
@@ -135,6 +142,7 @@ DEPENDENCIES
   etherpad-lite (>= 0)
   fail2ban (>= 0)
   hipsnip-solr (>= 0)
+  hostname (>= 0)
   htop (>= 0)
   logrotate (>= 0)
   nginx (>= 0)
