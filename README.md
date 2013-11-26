@@ -89,3 +89,8 @@ In order to add these secrets to the node's attributes, you can add the `secrets
 	}
 
 At runtime, the contents of the encrypted data bag (minus its ID attribute) will be merged with the existing "widget" attribute.
+
+## TODO
+
+* Server metrics collection (collectd, statsd, graphite)
+* Service monitoring (possibly with [Icinga](https://github.com/Bigpoint/icinga)?)
