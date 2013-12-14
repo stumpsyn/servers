@@ -4,6 +4,7 @@
     "role[base]",
     "recipe[nginx::repo]",
     "recipe[nginx]",
+    "recipe[disable-nginx-default-site]",
     "recipe[server-banner]"
   ],
   "default_attributes": {

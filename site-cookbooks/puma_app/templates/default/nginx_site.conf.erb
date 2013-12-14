@@ -4,9 +4,9 @@ upstream <%= @app_name %> {
 
 server {
   listen 80;
-  listen [::]:80 ipv6only=on;
+  listen [::]:80;
   listen 443 ssl;
-  listen [::]:443 ipv6only=on ssl;
+  listen [::]:443;
 
   server_name <%= @domains.join(' ') %>;
 
