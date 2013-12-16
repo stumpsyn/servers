@@ -2,14 +2,13 @@
 
 directory '<%= @current_path %>'
 environment '<%= @puma_env %>'
-daemonize true
 
 pidfile '<%= "#{@shared_path}/tmp/pids/puma.pid" %>'
 state_path '<%= "#{@shared_path}/tmp/pids/puma.state" %>'
 stdout_redirect '<%= "#{@shared_path}/log/puma_access.log" %>', '<%= "#{@shared_path}/log/puma_error.log" %>', true
 
 threads <%= @puma_threads.join(',') %>
-workers <%= @puma_workers %>
+workers <%= @puma_workers < 1 ? 1 : @puma_workers%>
 
 bind "<%= @puma_bind %>"
 

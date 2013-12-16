@@ -9,8 +9,6 @@ setgid <%= @user %>
 respawn
 respawn limit 3 30
 
-expect daemon
-
 env PATH=<%= "#{@shared_path}/ruby/bin:#{@shared_path}/bin:$PATH:/usr/local/bin" %>
 chdir <%= @current_path %>
 exec bundle exec puma -C <%= @puma_config_path %>
