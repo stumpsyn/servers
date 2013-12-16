@@ -1,7 +1,8 @@
 {
   "run_list": [
     "role[calagator]",
-    "role[ignite-portland-proposals]"
+    "role[ignite-portland-proposals]",
+    "role[ignite-corvallis-proposals]"
   ],
   "set_fqdn": "lucca.stumptownsyndicate.org",
   "server-banner": {
