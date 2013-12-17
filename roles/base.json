@@ -16,9 +16,12 @@
     "recipe[shm_noexec]",
     "recipe[sysctl]",
     "recipe[zsh]",
-    "recipe[platform_packages]"
+    "recipe[platform_packages]",
+    "recipe[secrets]",
+    "recipe[newrelic]"
   ],
   "default_attributes": {
+    "secrets": ["newrelic"],
     "users": [
       "aeschright",
       "christie",

@@ -82,6 +82,14 @@ GIT
     user (0.3.1)
 
 GIT
+  remote: https://github.com/heavywater/chef-newrelic.git
+  ref: master
+  sha: 054bcdf050bdca3c290db2170bf7a2b606aeb78f
+  specs:
+    newrelic (0.2.6)
+      apt (>= 0.0.0)
+
+GIT
   remote: https://github.com/nickola/chef-hostname.git
   ref: master
   sha: e9bc75a59be6907bf7fe2bc701d2256fb4f841b7
@@ -145,6 +153,7 @@ DEPENDENCIES
   hostname (>= 0)
   htop (>= 0)
   logrotate (>= 0)
+  newrelic (>= 0)
   nginx (>= 0)
   nodejs (>= 0)
   ntp (>= 0)

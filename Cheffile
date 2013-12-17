@@ -24,6 +24,8 @@ cookbook 'xml'
 cookbook 'zsh'
 cookbook 'platform_packages'
 
+cookbook 'newrelic', git: 'https://github.com/heavywater/chef-newrelic.git'
+
 # Web
 cookbook 'nginx'
 
