@@ -82,6 +82,17 @@ GIT
     user (0.3.1)
 
 GIT
+  remote: https://github.com/OpenWatch/etherpad-lite-cookbook.git
+  ref: master
+  sha: ce75cc6f60f82f873caa0fa14decb065fa208b04
+  specs:
+    etherpad-lite (0.1.2)
+      nginx (>= 0.0.0)
+      nodejs (>= 0.0.0)
+      npm (>= 0.0.0)
+      postgresql (>= 0.0.0)
+
+GIT
   remote: https://github.com/heavywater/chef-newrelic.git
   ref: master
   sha: 054bcdf050bdca3c290db2170bf7a2b606aeb78f
@@ -103,17 +114,6 @@ GIT
   specs:
     postgresql (0.13.0)
       apt (>= 1.9.0)
-
-GIT
-  remote: https://github.com/reidab/etherpad-lite-cookbook.git
-  ref: all_fixes
-  sha: 5cdc40c91059281b897742fc5650a094fb2132cb
-  specs:
-    etherpad-lite (0.1.1)
-      nginx (>= 0.0.0)
-      nodejs (>= 0.0.0)
-      npm (>= 0.0.0)
-      postgresql (>= 0.0.0)
 
 GIT
   remote: https://github.com/reidab/solr.git
