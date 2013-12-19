@@ -48,3 +48,6 @@ cookbook 'nodejs'
 
 # ZNC Server
 cookbook 'znc', git: 'https://github.com/reidab/znc.git'
+
+# IRC Server
+cookbook 'ngircd', git: 'https://github.com/stumpsyn/cookbook-ngircd.git'

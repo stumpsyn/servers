@@ -1,0 +1,29 @@
+{
+  "name": "irc_server",
+  "run_list": [
+    "role[base]",
+    "recipe[ngircd::server]",
+    "recipe[secrets]"
+  ],
+  "default_attributes": {
+    "secrets": ["ngircd"],
+    "ngircd": {
+      "server_name": "irc.stumptownsyndicate.org",
+      "admin_name": "Syndicate Admin",
+      "admin_location": "Portland, OR",
+      "admin_email": "root@stumptownsyndicate.org",
+      "motd_text": "Welcome to Stumptown Syndicate IRC",
+      "cloak_host": "irc.stumptownsyndicate.org",
+      "notice_auth": "yes"
+    },
+    "firewall": {
+      "rules": [
+        {"irc": { "port": "6667" } },
+        {"irc-ssl": { "port": "6697" } }
+      ]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
