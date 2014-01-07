@@ -50,4 +50,4 @@ cookbook 'nodejs'
 cookbook 'znc', git: 'https://github.com/reidab/znc.git'
 
 # IRC Server
-cookbook 'ngircd', git: 'https://github.com/stumpsyn/cookbook-ngircd.git'
+cookbook 'ngircd', git: 'https://github.com/reidab/cookbook-ngircd.git'

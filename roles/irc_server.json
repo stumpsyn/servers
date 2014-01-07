@@ -14,7 +14,10 @@
       "admin_email": "root@stumptownsyndicate.org",
       "motd_text": "Welcome to Stumptown Syndicate IRC",
       "cloak_host": "irc.stumptownsyndicate.org",
-      "notice_auth": "yes"
+      "notice_auth": "yes",
+      "limits": {
+        "max_nick_length": "60"
+      }
     },
     "firewall": {
       "rules": [

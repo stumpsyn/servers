@@ -116,6 +116,14 @@ GIT
       apt (>= 1.9.0)
 
 GIT
+GIT
+  remote: https://github.com/reidab/cookbook-ngircd.git
+  ref: master
+  sha: 2b1dbf24fdfdca46f3a8fbd51b063b29d79f135b
+  specs:
+    ngircd (0.1.0)
+
+GIT
   remote: https://github.com/reidab/solr.git
   ref: both_fixes
   sha: 15c0e60eff90940d278d3e768f652b4fd782f6c0
@@ -143,13 +151,6 @@ GIT
       apt (>= 0.0.0)
       ark (>= 0.0.0)
       yum (>= 0.0.0)
-
-GIT
-  remote: https://github.com/stumpsyn/cookbook-ngircd.git
-  ref: master
-  sha: c21a2c8557970a3cf0be81191dc07cb6fc24f22b
-  specs:
-    ngircd (0.1.0)
 
 DEPENDENCIES
   apt (>= 0)
