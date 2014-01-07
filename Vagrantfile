@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
-    web.vm.network :private_network, ip: "192.168.33.10"
+    web.vm.network :private_network, ip: "192.168.66.10"
   end
 
   config.vm.define "bunsen.local" do |web|
@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
-    web.vm.network :private_network, ip: "192.168.33.11"
+    web.vm.network :private_network, ip: "192.168.66.11"
   end
 
   # If true, then any SSH connections made will enable agent forwarding.
