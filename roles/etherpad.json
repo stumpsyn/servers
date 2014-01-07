@@ -1,7 +1,7 @@
 {
   "name": "etherpad",
   "run_list": [
-    "role[web]",
+    "role[nginx]",
     "recipe[secrets]",
     "recipe[nodejs]",
     "recipe[postgresql]",

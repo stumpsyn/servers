@@ -1,7 +1,7 @@
 {
   "name": "calagator",
   "run_list": [
-    "role[web]",
+    "role[nginx]",
     "recipe[ruby_install]",
     "recipe[xml]",
     "recipe[sqlite]",

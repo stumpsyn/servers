@@ -1,6 +1,5 @@
 {
   "run_list": [
-    "role[web]",
     "role[etherpad]",
     "role[znc_server]",
     "role[irc_server]"

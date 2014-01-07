@@ -1,7 +1,7 @@
 {
   "name": "ignite-corvallis-proposals",
   "run_list": [
-    "role[web]",
+    "role[nginx]",
     "recipe[nodejs]",
     "recipe[ruby_install]",
     "recipe[xml]",

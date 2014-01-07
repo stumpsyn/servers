@@ -1,6 +1,7 @@
 {
   "name": "znc_server",
   "run_list": [
+    "role[nginx]",
     "recipe[znc]",
     "recipe[znc::module_colloquy]",
     "recipe[znc_nginx_conf]"
