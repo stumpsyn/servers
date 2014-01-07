@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+  DocumentRoot /var/www/server-banner
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  <Directory /var/www/server-banner>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>

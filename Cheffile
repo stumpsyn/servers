@@ -26,8 +26,11 @@ cookbook 'platform_packages'
 
 cookbook 'newrelic', git: 'https://github.com/heavywater/chef-newrelic.git'
 
-# Web
+# Nginx
 cookbook 'nginx'
+
+# Apache
+cookbook 'apache2'
 
 # Puma App
 cookbook 'ruby_install', git: 'https://github.com/rosstimson/chef-ruby_install.git'

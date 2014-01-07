@@ -22,16 +22,3 @@ template "/var/www/server-banner/index.html" do
   )
 end
 
-template "/etc/nginx/sites-available/server-banner" do
-  source "nginx_banner_conf.erb"
-  mode 0644
-  owner "root"
-  group "root"
-  variables(
-    name: name
-  )
-  notifies :reload, "service[nginx]"
-end
-
-nginx_site "server-banner"
-

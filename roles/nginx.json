@@ -5,7 +5,7 @@
     "recipe[nginx::repo]",
     "recipe[nginx]",
     "recipe[disable-nginx-default-site]",
-    "recipe[server-banner]"
+    "recipe[server-banner::nginx]"
   ],
   "default_attributes": {
     "nginx": {

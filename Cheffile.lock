@@ -1,6 +1,7 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
+    apache2 (1.8.14)
     apt (2.2.1)
     ark (0.4.0)
     aws (1.0.0)
@@ -160,6 +161,7 @@ GIT
       yum (>= 0.0.0)
 
 DEPENDENCIES
+  apache2 (>= 0)
   apt (>= 0)
   atheme-services (>= 0)
   chef-solo-search (>= 0)
