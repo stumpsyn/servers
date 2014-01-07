@@ -1,0 +1,12 @@
+{
+  "run_list": [
+    "role[apache]"
+  ],
+  "set_fqdn": "beaker.stumptownsyndicate.org",
+  "server-banner": {
+    "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#beaker.stumptownsyndicate.org",
+    "image": "beaker.jpg",
+    "background_color": "#000",
+    "text_color": "#f8712e"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "apache",
+  "run_list": [
+    "role[base]",
+    "recipe[apache2]",
+    "recipe[apache2::mod_ssl]",
+    "recipe[apache2::mod_rewrite]",
+    "recipe[apache2::mod_php5]",
+    "recipe[server-banner::apache]"
+  ],
+  "default_attributes": {
+    "firewall": {
+      "rules": [
+        {"http": { "port": "80" } },
+        {"https": { "port": "443" } }
+      ]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
