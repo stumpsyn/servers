@@ -2,11 +2,12 @@
   "name": "irc_server",
   "run_list": [
     "role[base]",
+    "recipe[secrets]",
     "recipe[ngircd::server]",
-    "recipe[secrets]"
+    "recipe[atheme-services]"
   ],
   "default_attributes": {
-    "secrets": ["ngircd"],
+    "secrets": ["ngircd", "atheme-services"],
     "ngircd": {
       "server_name": "irc.stumptownsyndicate.org",
       "admin_name": "Syndicate Admin",
@@ -19,9 +20,22 @@
         "max_nick_length": "60"
       }
     },
+    "atheme-services": {
+      "protocol": "ngircd",
+      "serverinfo": {
+        "netname": "Stumptown Syndicate IRC",
+        "recontime": 30,
+        "hidehostsuffix": "host.hidden",
+        "adminname": "Syndicate Root",
+        "adminemail": "root@stumptownsyndicate.org"
+      },
+      "uplink": {
+        "name": "irc.stumptownsyndicate.org",
+        "host": "127.0.0.1"
+      }
+    },
     "firewall": {
       "rules": [
-        {"irc": { "port": "6667" } },
         {"irc-ssl": { "port": "6697" } }
       ]
     }

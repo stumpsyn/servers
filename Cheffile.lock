@@ -116,6 +116,13 @@ GIT
       apt (>= 1.9.0)
 
 GIT
+  remote: https://github.com/reidab/chef-atheme-services.git
+  ref: master
+  sha: 37c1053c6c837a64cdd56e78aa654e52a3473c94
+  specs:
+    atheme-services (0.1.0)
+      ark (>= 0.0.0)
+
 GIT
   remote: https://github.com/reidab/cookbook-ngircd.git
   ref: master
@@ -154,6 +161,7 @@ GIT
 
 DEPENDENCIES
   apt (>= 0)
+  atheme-services (>= 0)
   chef-solo-search (>= 0)
   etherpad-lite (>= 0)
   fail2ban (>= 0)

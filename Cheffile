@@ -51,3 +51,4 @@ cookbook 'znc', git: 'https://github.com/reidab/znc.git'
 
 # IRC Server
 cookbook 'ngircd', git: 'https://github.com/reidab/cookbook-ngircd.git'
+cookbook 'atheme-services', git: 'https://github.com/reidab/chef-atheme-services.git'
