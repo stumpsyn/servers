@@ -4,13 +4,11 @@
     "role[znc_server]",
     "role[irc_server]"
   ],
-  "default_attributes": {
-    "set_fqdn": "bunsen.stumptownsyndicate.org",
-    "server-banner": {
-      "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#bunsen.stumptownsyndicate.org",
-      "image": "bunsen.jpg",
-      "background_color": "#fff",
-      "text_color": "#f2cf54"
-    }
+  "set_fqdn": "bunsen.stumptownsyndicate.org",
+  "server-banner": {
+    "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#bunsen.stumptownsyndicate.org",
+    "image": "bunsen.jpg",
+    "background_color": "#fff",
+    "text_color": "#f2cf54"
   }
 }
