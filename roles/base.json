@@ -31,6 +31,7 @@
     "platform_packages": {
       "pkgs": [
         { "name": "git-core" },
+        { "name": "subversion" },
         { "name": "vim" },
         { "name": "rsync" },
         { "name": "htop" },
