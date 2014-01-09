@@ -1,0 +1,27 @@
+{
+  "name": "data_bag_item_simple-mysql-database_fusion_invoice",
+  "json_class": "Chef::DataBagItem",
+  "chef_type": "data_bag_item",
+  "data_bag": "simple-mysql-database",
+  "raw_data": {
+    "id": "fusion_invoice",
+    "name": {
+      "encrypted_data": "mFWr7AshSnWEbIxhak7LTZVTa7ERd/rLvMVJ2A3cm6JvmjOjnJYvaOXNzst4\nM6kp\n",
+      "iv": "PVtBjgVZzL5+s/3qmUP/Cg==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "user": {
+      "encrypted_data": "fxCbhTfjcSV6Nw4m4VIOVxIPKiPxbY6dyeRoqFQBhMo=\n",
+      "iv": "O/bfU+/PCBm7jC6FZkyT4Q==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "password": {
+      "encrypted_data": "gh6BoBeJJkLcTjqTVFYGoejh8XAK5gYFiw40lV0mXGueLau5EPiZ6iWd/B/V\nQ1XE\n",
+      "iv": "3O0s2askp3zjBRIrfQpiYA==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    }
+  }
+}

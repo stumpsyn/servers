@@ -13,10 +13,11 @@
     "text_color": "#f8712e"
   },
   "simple-mysql-database": {
-    "databases": ["mediawiki"]
+    "databases": ["mediawiki", "fusion_invoice"]
   },
   "simple-apache-config": {
     "sites": [
+      { "server_name": "invoices.stumptownsyndicate.org" },
       {
         "server_name": "pdxruby.org",
         "server_aliases": [
