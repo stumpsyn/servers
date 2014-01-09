@@ -38,6 +38,7 @@
         { "name": "ntop" },
         { "name": "iotop" },
         { "name": "elinks" },
+        { "name": "unzip" },
         { "name": "tree" }
       ]
     },

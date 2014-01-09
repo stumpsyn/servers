@@ -10,6 +10,21 @@
     "text_color": "#f8712e"
   },
   "syndicate-wordpress": {
+    "plugins": [
+      "markdown-on-save",
+      "raw-html",
+      "w3-total-cache",
+      "mollom",
+      "browserid",
+      "disable-comments",
+      "google-analyticator",
+      "jetpack",
+      "page-links-to",
+      "redirection",
+      "user-submitted-posts",
+      "wordpress-feed-statistics",
+      "wordpress-mu-domain-mapping"
+    ],
     "sites": [
       {
         "server_name": "stumptownsyndicate.org",

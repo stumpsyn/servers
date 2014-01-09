@@ -28,6 +28,28 @@ subversion install_path do
   group "admin"
 end
 
+# Download wp-cli
+remote_file "/usr/local/bin/wp" do
+  source "https://github.com/wp-cli/wp-cli/releases/download/v0.13.0/wp-cli.phar"
+  checksum "3d961210c1872831329172b60e778c77ac54396bbf7547f461db4aa27eafa26e"
+  mode 0755
+end
+
+# Install plugins
+node['syndicate-wordpress']['plugins'].each do |plugin|
+  execute "wp_install_#{plugin}" do
+    command "wp plugin install #{plugin}"
+    cwd install_path
+    user "wordpress"
+  end
+end
+
+if node['syndicate-wordpress']['plugins'].include?('wordpress-mu-domain-mapping')
+  execute "copy_sunrise" do
+    command "cp #{install_path}/wp-content/plugins/wordpress-mu-domain-mapping/sunrise.php #{install_path}/wp-content/"
+  end
+end
+
 # Install custom themes
 themes = node['syndicate-wordpress']['sites'].map{|site| site['theme']}.compact
 

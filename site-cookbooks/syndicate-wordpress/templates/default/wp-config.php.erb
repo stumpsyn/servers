@@ -93,6 +93,14 @@ define('BLOG_ID_CURRENT_SITE', 1);
 
 define('FS_METHOD', 'direct');
 
+<% if node['syndicate-wordpress']['plugins'].include?('wordpress-mu-domain-mapping') %>
+/** Enable W3 Total Cache */
+define('SUNRISE', 'on'); // Added by W3 Total Cache
+<% end %>
+
+<% if node['syndicate-wordpress']['plugins'].include?('w3-total-cache') %>
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
 <% end %>
 
 /* That's all, stop editing! Happy blogging. */

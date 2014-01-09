@@ -11,7 +11,10 @@
   "default_attributes": {
     "platform_packages": {
       "pkgs": [
-        { "name": "php5-mysql" }
+        { "name": "php5-mysql" },
+        { "name": "php5-memcache" },
+        { "name": "php5-tidy" },
+        { "name": "php5-curl" }
       ]
     },
     "firewall": {

@@ -8,6 +8,7 @@ default['syndicate-wordpress']['db']['name'] = 'syndicate_wordpress'
 default['syndicate-wordpress']['db']['user'] = 'wordpress'
 
 default['syndicate-wordpress']['sites'] = []
+default['syndicate-wordpress']['plugins'] = []
 
 # These attributes should all be set via secrets
 default['syndicate-wordpress']['db']['password'] = nil
