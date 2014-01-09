@@ -1,6 +1,7 @@
 {
   "run_list": [
-    "role[wordpress]"
+    "role[wordpress]",
+    "role[civicrm]"
   ],
   "set_fqdn": "beaker.stumptownsyndicate.org",
   "server-banner": {

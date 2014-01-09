@@ -1,0 +1,14 @@
+{
+  "name": "civicrm",
+  "run_list": [
+    "role[wordpress]",
+    "recipe[civicrm-wordpress]"
+  ],
+  "default_attributes": {
+    "secrets": ["civicrm-wordpress"]
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
+
