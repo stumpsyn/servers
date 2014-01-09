@@ -1,0 +1,13 @@
+{
+  "name": "mediawiki",
+  "run_list": [
+    "role[apache]",
+    "recipe[mediawiki-database]"
+  ],
+  "default_attributes": {
+    "secrets": ["mediawiki-database"]
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
