@@ -2,7 +2,7 @@ name = node['server-banner']['domain'] || node['set_fqdn'] || node.name
 
 include_recipe "server-banner::default"
 
-template "/etc/nginx/sites-available/server-banner" do
+template "/etc/nginx/sites-available/00-server-banner" do
   source "nginx_banner_conf.erb"
   mode 0644
   owner "root"
@@ -13,4 +13,4 @@ template "/etc/nginx/sites-available/server-banner" do
   notifies :reload, "service[nginx]"
 end
 
-nginx_site "server-banner"
+nginx_site "00-server-banner"
