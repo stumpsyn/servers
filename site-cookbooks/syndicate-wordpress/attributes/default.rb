@@ -1,7 +1,8 @@
 default['syndicate-wordpress']['version'] = "3.8"
 default['syndicate-wordpress']['install-path'] = "/var/www/wordpress"
 
-default['syndicate-wordpress']['allow-multisite'] = true
+default['syndicate-wordpress']['multisite'] = true
+default['syndicate-wordpress']['multisite_primary_domain'] = "stumptownsyndicate.org"
 
 default['syndicate-wordpress']['db']['name'] = 'syndicate_wordpress'
 default['syndicate-wordpress']['db']['user'] = 'wordpress'

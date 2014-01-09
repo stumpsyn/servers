@@ -80,9 +80,19 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
-<% if node['syndicate-wordpress']['allow-multisite'] %>
+<% if node['syndicate-wordpress']['multisite'] %>
 /* Multisite */
 define( 'WP_ALLOW_MULTISITE', true );
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', true);
+define('DOMAIN_CURRENT_SITE', '<%= node['syndicate-wordpress']['multisite_primary_domain'] %>');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+<% end %>
+
+define('FS_METHOD', 'direct');
+
 <% end %>
 
 /* That's all, stop editing! Happy blogging. */

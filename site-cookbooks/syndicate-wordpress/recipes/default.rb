@@ -53,16 +53,19 @@ template File.join(install_path, 'wp-config.php') do
   source "wp-config.php.erb"
 end
 
+# Write .htaccess file
+template File.join(install_path, '.htaccess') do
+  source "htaccess.erb"
+  action :create_if_missing
+end
+
 bash "set WordPress ownership and permissions" do
   code <<-BASH
     chown -R wordpress:admin #{install_path}
     find #{install_path} -type d -exec chmod 775 {} \\;
     find #{install_path} -type f -exec chmod 664 {} \\;
-    touch #{install_path}/.htaccess
     chgrp www-data #{install_path}/.htaccess
     chgrp -R www-data #{install_path}/wp-content
-    chgrp -R admin #{install_path}/wp-content/plugins
-    chgrp -R admin #{install_path}/wp-content/themes
   BASH
 end
 
