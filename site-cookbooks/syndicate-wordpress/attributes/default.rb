@@ -1,0 +1,20 @@
+default['syndicate-wordpress']['version'] = "3.8"
+default['syndicate-wordpress']['install-path'] = "/var/www/wordpress"
+
+default['syndicate-wordpress']['allow-multisite'] = true
+
+default['syndicate-wordpress']['db']['name'] = 'syndicate_wordpress'
+default['syndicate-wordpress']['db']['user'] = 'wordpress'
+
+default['syndicate-wordpress']['sites'] = []
+
+# These attributes should all be set via secrets
+default['syndicate-wordpress']['db']['password'] = nil
+default['syndicate-wordpress']['auth_key'] = nil
+default['syndicate-wordpress']['secure_auth_key'] = nil
+default['syndicate-wordpress']['logged_in_key'] = nil
+default['syndicate-wordpress']['nonce_key'] = nil
+default['syndicate-wordpress']['auth_salt'] = nil
+default['syndicate-wordpress']['secure_auth_salt'] = nil
+default['syndicate-wordpress']['logged_in_salt'] = nil
+default['syndicate-wordpress']['nonce_salt'] = nil

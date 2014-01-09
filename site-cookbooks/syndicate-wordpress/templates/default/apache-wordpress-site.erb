@@ -1,0 +1,48 @@
+# Apache config for domains on the Syndicate server using WordPress multi-site
+# [!!] This file is managed via Chef and should not be edited directly.
+
+<VirtualHost *:80>
+  ServerName <%= @server_name %>
+  ServerAlias <%= @server_aliases %>
+
+  # Don't change this per-domain, it needs to point at the WordPress install.
+  DirectoryIndex index.html index.php
+  DocumentRoot <%= @doc_root %>
+
+  AcceptPathInfo on
+
+  # Custom log file locations
+  LogLevel warn
+  ErrorLog  /var/log/apache2/<%= @server_name %>-error.log
+  CustomLog /var/log/apache2/<%= @server_name %>-access.log combined
+
+  # If we need stuff other than WordPress, alias directories here
+  <% @aliases.each do |path, target| %>
+  Alias <%= path %> <%= target %>
+  <% end %>
+</VirtualHost>
+
+<VirtualHost *:443>
+  ServerName <%= @server_name %>
+  ServerAlias <%= @server_aliases %>
+
+  # Don't change this per-domain, it needs to point at the WordPress install.
+  DirectoryIndex index.html index.php
+  DocumentRoot <%= @doc_root %>
+
+  AcceptPathInfo on
+
+  # Custom log file locations
+  LogLevel warn
+  ErrorLog  /var/log/apache2/<%= @server_name %>-error.log
+  CustomLog /var/log/apache2/<%= @server_name %>-access.log combined
+
+  # If we need stuff other than WordPress, alias directories here
+  <% @aliases.each do |path, target| %>
+  Alias <%= path %> <%= target %>
+  <% end %>
+
+  SSLEngine on
+  SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem
+  SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+</VirtualHost>

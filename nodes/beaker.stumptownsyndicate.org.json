@@ -1,6 +1,6 @@
 {
   "run_list": [
-    "role[apache]"
+    "role[wordpress]"
   ],
   "set_fqdn": "beaker.stumptownsyndicate.org",
   "server-banner": {
@@ -8,5 +8,117 @@
     "image": "beaker.jpg",
     "background_color": "#000",
     "text_color": "#f8712e"
+  },
+  "syndicate-wordpress": {
+    "sites": [
+      {
+        "server_name": "stumptownsyndicate.org",
+        "server_aliases": [
+          "*.stumptownsyndicate.org",
+          "stumptownsyndicate.com",
+          "stumpsyn.org"
+        ],
+        "aliases": {
+          "/documents": "/var/www/stumptownsyndicate.org/documents",
+          "/talks": "/var/www/stumptownsyndicate.org/talks",
+          "/wiki": "/var/www/stumptownsyndicate.org/mediawiki/index.php",
+          "/mw": "/var/www/stumptownsyndicate.org/mediawiki/"
+        }
+      },
+      {
+        "server_name": "barcampportland.org",
+        "server_aliases": [
+          "www.barcampportland.org",
+          "barcampportland.com",
+          "www.barcampportland.com"
+        ],
+        "theme": {
+          "type": "git",
+          "name": "twentyeleven-bc",
+          "repo": "https://github.com/stumpsyn/twentyeleven-bc.git"
+        }
+      },
+      {
+        "server_name": "citizencodeofconduct.org",
+        "server_aliases": ["www.citizencodeofconduct.org"]
+      },
+      {
+        "server_name": "codensplode.org",
+        "server_aliases": [
+          "www.codensplode.org",
+          "codeandsplode.org",
+          "www.codeandsplode.org"
+        ],
+        "theme": {
+          "type": "git",
+          "name": "twentyeleven-bc",
+          "repo": "https://github.com/stumpsyn/twentyeleven-cns.git"
+        }
+      },
+      {
+        "server_name": "igniteportland.org",
+        "server_aliases": [
+          "www.igniteportland.org",
+          "igniteportland.com",
+          "www.igniteportland.com"
+        ],
+        "theme": {
+          "type": "svn",
+          "name": "hiero",
+          "repo": "http://themes.svn.wordpress.org/hiero/1.2/"
+        }
+      },
+      {
+        "server_name": "koshevoy.net",
+        "server_aliases": [
+          "koshevoy.org",
+          "koshevoy.com",
+          "www.koshevoy.net",
+          "www.koshevoy.com",
+          "www.koshevoy.org",
+          "igal.koshevoy.net",
+          "igal.koshevoy.com",
+          "igal.koshevoy.org"
+        ],
+        "theme": {
+          "type": "git",
+          "name": "twentyeleven-igal",
+          "repo": "https://github.com/stumpsyn/twentyeleven-igal.git"
+        }
+      },
+      {
+        "server_name": "legionoftech.org",
+        "server_aliases": [
+          "www.legionoftech.org",
+          "legionoftech.com",
+          "www.legionoftech.com"
+        ]
+      },
+      {
+        "server_name": "pdxtechworkshops.org",
+        "server_aliases": ["www.pdxtechworkshops.org"]
+      },
+      {
+        "server_name": "wherecamppdx.org",
+        "server_aliases": ["www.wherecamppdx.org"],
+        "aliases": {
+          "/wiki": "/var/www/wherecamppdx.org/wiki",
+          "/sponsor_logos": "/var/www/wherecamppdx.org/sponsor_logos"
+        },
+        "theme": {
+          "type": "git",
+          "name": "wherecamppdx",
+          "repo": "https://github.com/wherecamppdx/wherecamppdx.git"
+        }
+      },
+      {
+        "server_name": "womenwhohack.org",
+        "server_aliases": [
+          "www.womenwhohack.org",
+          "womenwhohack.com",
+          "www.womenwhohack.com"
+        ]
+      }
+    ]
   }
 }

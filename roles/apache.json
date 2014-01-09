@@ -9,6 +9,11 @@
     "recipe[server-banner::apache]"
   ],
   "default_attributes": {
+    "platform_packages": {
+      "pkgs": [
+        { "name": "php5-mysql" }
+      ]
+    },
     "firewall": {
       "rules": [
         {"http": { "port": "80" } },

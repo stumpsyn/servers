@@ -1,0 +1,25 @@
+{
+  "name": "wordpress",
+  "run_list": [
+    "role[apache]",
+    "recipe[secrets]",
+    "recipe[mysql::client]",
+    "recipe[mysql::ruby]",
+    "recipe[mysql::server]",
+    "recipe[syndicate-wordpress]"
+  ],
+  "default_attributes": {
+    "secrets": ["mysql", "syndicate-wordpress"],
+    "mysql": {
+      "remove_anonymous_users": true,
+      "allow_remote_root": false,
+      "remove_test_database": true
+    },
+    "syndicate-wordpress": {
+      "version": "3.8"
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
