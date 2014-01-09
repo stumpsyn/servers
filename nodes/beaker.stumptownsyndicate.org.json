@@ -20,44 +20,20 @@
       { "server_name": "invoices.stumptownsyndicate.org" },
       {
         "server_name": "pdxruby.org",
-        "server_aliases": [
-          "*.pdxruby.org",
-          "pdxruby.com",
-          "*.pdxruby.com",
-          "pdxruby.net",
-          "*.pdxruby.net"
-        ]
+        "server_aliases": [ "*.pdxruby.org", "pdxruby.com", "*.pdxruby.com", "pdxruby.net", "*.pdxruby.net" ]
       },
       {
         "server_name": "pdxfoscon.org",
-        "server_aliases": [
-          "*.pdxfoscon.org",
-          "pdxfoscon.com",
-          "*.pdxfoscon.com",
-          "pdxfoscon.net",
-          "*.pdxfoscon.net"
-        ]
+        "server_aliases": [ "*.pdxfoscon.org", "pdxfoscon.com", "*.pdxfoscon.com", "pdxfoscon.net", "*.pdxfoscon.net" ]
       },
       {
         "server_name": "pdxfunc.org",
-        "server_aliases": [
-          "*.pdxfunc.org",
-          "pdxfunc.com",
-          "*.pdxfunc.com",
-          "pdxfunc.net",
-          "*.pdxfunc.net"
-        ],
+        "server_aliases": [ "*.pdxfunc.org", "pdxfunc.com", "*.pdxfunc.com", "pdxfunc.net", "*.pdxfunc.net" ],
         "document_root": "/var/www/pdxfunc.org/public"
       },
       {
         "server_name": "pdxdevops.org",
-        "server_aliases": [
-          "*.pdxdevops.org",
-          "pdxdevops.com",
-          "*.pdxdevops.com",
-          "pdxdevops.net",
-          "*.pdxdevops.net"
-        ],
+        "server_aliases": [ "*.pdxdevops.org", "pdxdevops.com", "*.pdxdevops.com", "pdxdevops.net", "*.pdxdevops.net" ],
         "document_root": "/var/www/pdxdevops.org/public"
       }
     ]
