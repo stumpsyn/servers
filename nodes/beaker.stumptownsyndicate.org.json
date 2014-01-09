@@ -95,7 +95,7 @@
         ],
         "theme": {
           "type": "git",
-          "name": "twentyeleven-bc",
+          "name": "twentyeleven-cns",
           "repo": "https://github.com/stumpsyn/twentyeleven-cns.git"
         }
       },
