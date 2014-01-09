@@ -2,19 +2,12 @@
   "name": "wordpress",
   "run_list": [
     "role[apache]",
+    "role[mysql]",
     "recipe[secrets]",
-    "recipe[mysql::client]",
-    "recipe[mysql::ruby]",
-    "recipe[mysql::server]",
     "recipe[syndicate-wordpress]"
   ],
   "default_attributes": {
-    "secrets": ["mysql", "syndicate-wordpress"],
-    "mysql": {
-      "remove_anonymous_users": true,
-      "allow_remote_root": false,
-      "remove_test_database": true
-    },
+    "secrets": ["syndicate-wordpress"],
     "syndicate-wordpress": {
       "version": "3.8"
     }

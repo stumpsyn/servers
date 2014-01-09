@@ -1,0 +1,23 @@
+{
+  "name": "mysql",
+  "run_list": [
+    "role[base]",
+    "recipe[secrets]",
+    "recipe[mysql::client]",
+    "recipe[mysql::ruby]",
+    "recipe[mysql::server]",
+    "recipe[simple-mysql-database]"
+  ],
+  "default_attributes": {
+    "secrets": ["mysql"],
+    "mysql": {
+      "remove_anonymous_users": true,
+      "allow_remote_root": false,
+      "remove_test_database": true
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
+

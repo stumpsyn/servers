@@ -1,9 +1,9 @@
 {
   "run_list": [
     "role[apache]",
+    "role[mysql]",
     "role[wordpress]",
-    "role[civicrm]",
-    "role[mediawiki]"
+    "role[civicrm]"
   ],
   "set_fqdn": "beaker.stumptownsyndicate.org",
   "server-banner": {
@@ -11,6 +11,9 @@
     "image": "beaker.jpg",
     "background_color": "#000",
     "text_color": "#f8712e"
+  },
+  "simple-mysql-database": {
+    "databases": ["mediawiki"]
   },
   "simple-apache-config": {
     "sites": [

@@ -1,0 +1,27 @@
+{
+  "name": "data_bag_item_simple-mysql-database_mediawiki",
+  "json_class": "Chef::DataBagItem",
+  "chef_type": "data_bag_item",
+  "data_bag": "simple-mysql-database",
+  "raw_data": {
+    "id": "mediawiki",
+    "name": {
+      "encrypted_data": "I7eVFL1tjXIb2IvzENkItqQs3fMU+tL5GTqKaCP0ijA=\n",
+      "iv": "ILqb/46DMx5tYywesfL/XQ==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "user": {
+      "encrypted_data": "ZZbBwoZHStOtMDIJjxbO9Mc1THSOInT0++nnOYtTUyU=\n",
+      "iv": "yUcC5J4Y/ruWATw42pGvPQ==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "password": {
+      "encrypted_data": "96ZikJhjKzTQzLU0YwPe5UDkXYrXa/DrTrmJ2hBWHKOw2IGmRsoB7pbCAeHq\nAvu0\n",
+      "iv": "T88Xa4pE+mv1JxwQwfejfA==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    }
+  }
+}
