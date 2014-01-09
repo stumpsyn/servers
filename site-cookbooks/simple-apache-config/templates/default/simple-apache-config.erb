@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+  ServerName <%= @site['server_name'] %>
+  ServerAlias <%= @site['server_aliases'].join(' ') %>
+
+  DocumentRoot <%= @document_root %>
+  <Directory />
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride all
+  </Directory>
+</VirtualHost>

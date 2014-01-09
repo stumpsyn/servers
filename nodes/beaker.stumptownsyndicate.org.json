@@ -1,5 +1,6 @@
 {
   "run_list": [
+    "role[apache]",
     "role[wordpress]",
     "role[civicrm]",
     "role[mediawiki]"
@@ -10,6 +11,52 @@
     "image": "beaker.jpg",
     "background_color": "#000",
     "text_color": "#f8712e"
+  },
+  "simple-apache-config": {
+    "sites": [
+      {
+        "server_name": "pdxruby.org",
+        "server_aliases": [
+          "*.pdxruby.org",
+          "pdxruby.com",
+          "*.pdxruby.com",
+          "pdxruby.net",
+          "*.pdxruby.net"
+        ]
+      },
+      {
+        "server_name": "pdxfoscon.org",
+        "server_aliases": [
+          "*.pdxfoscon.org",
+          "pdxfoscon.com",
+          "*.pdxfoscon.com",
+          "pdxfoscon.net",
+          "*.pdxfoscon.net"
+        ]
+      },
+      {
+        "server_name": "pdxfunc.org",
+        "server_aliases": [
+          "*.pdxfunc.org",
+          "pdxfunc.com",
+          "*.pdxfunc.com",
+          "pdxfunc.net",
+          "*.pdxfunc.net"
+        ],
+        "document_root": "/var/www/pdxfunc.org/public"
+      },
+      {
+        "server_name": "pdxdevops.org",
+        "server_aliases": [
+          "*.pdxdevops.org",
+          "pdxdevops.com",
+          "*.pdxdevops.com",
+          "pdxdevops.net",
+          "*.pdxdevops.net"
+        ],
+        "document_root": "/var/www/pdxdevops.org/public"
+      }
+    ]
   },
   "syndicate-wordpress": {
     "plugins": [
