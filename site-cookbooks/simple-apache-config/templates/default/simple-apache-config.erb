@@ -1,6 +1,8 @@
 <VirtualHost *:80>
   ServerName <%= @site['server_name'] %>
+  <% if @site['server_aliases'] %>
   ServerAlias <%= @site['server_aliases'].join(' ') %>
+  <% end %>
 
   DocumentRoot <%= @document_root %>
   <Directory />
