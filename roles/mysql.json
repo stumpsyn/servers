@@ -13,7 +13,10 @@
     "mysql": {
       "remove_anonymous_users": true,
       "allow_remote_root": false,
-      "remove_test_database": true
+      "remove_test_database": true,
+      "tunable": {
+        "key_buffer_size": "16M"
+      }
     }
   },
   "chef_type": "role",

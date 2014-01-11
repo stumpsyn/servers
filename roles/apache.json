@@ -15,8 +15,20 @@
         { "name": "php5-mysql" },
         { "name": "php5-memcache" },
         { "name": "php5-tidy" },
-        { "name": "php5-curl" }
+        { "name": "php5-curl" },
+        { "name": "php-apc" }
       ]
+    },
+    "apache": {
+      "timeout": 60,
+      "prefork": {
+        "startservers": 5,
+        "minspareservers": 5,
+        "maxspareservers": 10,
+        "serverlimit": 100,
+        "maxclients": 100,
+        "maxrequestsperchild": 1000
+      }
     },
     "firewall": {
       "rules": [
