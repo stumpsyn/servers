@@ -1,0 +1,12 @@
+{
+  "run_list": [
+    "role[osbridge]"
+  ],
+  "set_fqdn": "arroway.stumptownsyndicate.org",
+  "server-banner": {
+    "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#arroway.stumptownsyndicate.org",
+    "image": "arroway.jpg",
+    "background_color": "#070A09",
+    "text_color": "#D8E1E0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "data_bag_item_simple-mysql-database_osbridge_ocw",
+  "json_class": "Chef::DataBagItem",
+  "chef_type": "data_bag_item",
+  "data_bag": "simple-mysql-database",
+  "raw_data": {
+    "id": "osbridge_ocw",
+    "name": {
+      "encrypted_data": "Vv8T1nuwuBsYQ6drRVa+0QeXBNVZUfAQng2L4aTBO9c=\n",
+      "iv": "rrl/5p8E1Jrdd8KAytHwzA==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "user": {
+      "encrypted_data": "xOL3Au7q6FX3SAWxO4JWogSUxUqZ5H6seMZrhSRKRCY=\n",
+      "iv": "2CZnrvoY9ySWHh7Pwc+BhQ==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "password": {
+      "encrypted_data": "txd59StmXCm4YjKASt5HYx9RNU5PPq9VXRVcq07tVHY9pKhticP9IzADgQFM\nsVPE\n",
+      "iv": "rZ+oDvhdOtvLffdleo0uXg==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    }
+  }
+}

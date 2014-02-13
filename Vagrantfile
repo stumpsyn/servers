@@ -52,6 +52,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web.vm.network :private_network, ip: "192.168.66.12"
   end
 
+  config.vm.define "arroway.local" do |web|
+    # Create a forwarded port mapping which allows access to a specific port
+    # within the machine from a port on the host machine. In the example below,
+    # accessing "localhost:8080" will access port 80 on the guest machine.
+    web.vm.network :forwarded_port, guest: 80, host: 8004
+    web.vm.network :forwarded_port, guest: 443, host: 4434
+
+    # Create a private network, which allows host-only access to the machine
+    # using a specific IP.
+    web.vm.network :private_network, ip: "192.168.66.13"
+  end
+
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
   config.ssh.forward_agent = true

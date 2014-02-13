@@ -25,6 +25,8 @@ You'll then want to dump vagrant's SSH config to a file, so you can reference it
 
     $ vagrant ssh-config lucca.local > vagrant_ssh_config
     $ vagrant ssh-config bunsen.local >> vagrant_ssh_config
+    $ vagrant ssh-config beaker.local >> vagrant_ssh_config
+    $ vagrant ssh-config arroway.local >> vagrant_ssh_config
 
 You can then install chef on the VM using:
 
