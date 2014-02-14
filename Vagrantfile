@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
+    web.vm.network :forwarded_port, guest: 22, host: 2222, id: "ssh"
     web.vm.network :forwarded_port, guest: 80, host: 8001
     web.vm.network :forwarded_port, guest: 443, host: 4431
     web.vm.network :forwarded_port, guest: 8983, host: 8983
@@ -29,6 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
+    web.vm.network :forwarded_port, guest: 22, host: 2200, id: "ssh"
     web.vm.network :forwarded_port, guest: 80, host: 8002
     web.vm.network :forwarded_port, guest: 443, host: 4432
     web.vm.network :forwarded_port, guest: 7777, host: 7777
@@ -44,6 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
+    web.vm.network :forwarded_port, guest: 22, host: 2201, id: "ssh"
     web.vm.network :forwarded_port, guest: 80, host: 8003
     web.vm.network :forwarded_port, guest: 443, host: 4433
 
@@ -56,6 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
+    web.vm.network :forwarded_port, guest: 22, host: 2202, id: "ssh"
     web.vm.network :forwarded_port, guest: 80, host: 8004
     web.vm.network :forwarded_port, guest: 443, host: 4434
 
