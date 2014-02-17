@@ -1,5 +1,7 @@
 {
   "run_list": [
+    "role[nginx]",
+    "role[proxied-apache]",
     "role[osbridge-ocw]",
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",

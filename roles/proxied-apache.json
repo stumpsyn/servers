@@ -1,0 +1,21 @@
+{
+  "name": "proxied-apache",
+  "run_list": [
+    "role[apache]"
+  ],
+  "default_attributes": { 
+    "firewall": {
+      "rules": [
+        {"http": { "port": "5500" } }
+      ]
+    }
+  },
+  "override_attributes": {
+    "apache": {
+      "listen_ports": ["5500"]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
