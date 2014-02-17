@@ -4,7 +4,8 @@
     "role[proxied-apache]",
     "role[mysql]",
     "role[osbridge-ocw]",
-    "role[wordpress]"
+    "role[wordpress]",
+    "recipe[osbridge]"
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
   "server-banner": {

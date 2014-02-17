@@ -1,0 +1,72 @@
+upstream osbridge-ocw {
+  server unix:///var/www/osbridge-ocw/shared/tmp/sockets/puma.sock;
+}
+
+upstream osbridge-wordpress {
+  server 127.0.0.1:5500;
+}
+
+server {
+  listen 80;
+  listen [::]:80;
+  listen 443 ssl;
+  listen [::]:443;
+
+  server_name opensourcebridge.org www.opensourcebridge.org osbridge.stumptownsyndicate.org osbridge.local osbridge-ocw.local;
+
+  keepalive_timeout 10;
+
+  # root /var/www/osbridge-ocw/current/public;
+  root /var/www/wordpress;
+
+  # try_files $uri/index.html $uri @rails_app;
+  try_files $uri /index.php;
+
+  # TODO: Make this work with new root configuration
+  # if (-f $document_root/maintenance.html) {
+  #   rewrite  ^(.*)$  /maintenance.html last;
+  #   break;
+  # }
+
+  location ~ \.php$ {
+    proxy_set_header X-Real-IP  $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header Host opensourcebridge.org;
+    proxy_pass http://osbridge-wordpress;
+  }
+
+  location ~ /\.ht {
+    deny all;
+  }
+
+  location ~ ^/(assets)/  {
+    root /var/www/osbridge-ocw/current/public;
+    expires max;
+    add_header  Cache-Control public;
+  }
+
+  location @rails_app {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+
+    access_log /var/www/osbridge-ocw/shared/log/osbridge-ocw.nginx.access.log;
+    error_log  /var/www/osbridge-ocw/shared/log/osbridge-ocw.nginx.error.log info;
+
+    proxy_pass http://osbridge-ocw;
+  }
+
+  location ~* \.(ico|css|gif|jpe?g|png)(\?[0-9]+)?$ {
+     expires max;
+     break;
+  }
+
+  location ~ ^/javascripts/.*\.js(\?[0-9]+)?$ {
+     expires max;
+     break;
+  }
+
+  error_page 500 504 /500.html;
+  error_page 502 /502.html;
+  error_page 503 /503.html;
+}
