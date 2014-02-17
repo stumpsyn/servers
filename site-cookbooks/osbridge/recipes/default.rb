@@ -7,6 +7,10 @@
 # All rights reserved
 #
 
+git "/var/www/common_assets" do
+  repository "https://github.com/osbridge/osbp_styles.git"
+end
+
 # Disable the osbridge-ocw nginx configuration written by the puma_app cookbook
 nginx_site "osbridge-ocw.conf" do
   enable false
