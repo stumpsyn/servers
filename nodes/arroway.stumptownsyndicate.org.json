@@ -2,6 +2,7 @@
   "run_list": [
     "role[nginx]",
     "role[proxied-apache]",
+    "role[mysql]",
     "role[osbridge-ocw]",
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
@@ -10,5 +11,8 @@
     "image": "arroway.jpg",
     "background_color": "#070A09",
     "text_color": "#D8E1E0"
+  },
+  "simple-mysql-database": {
+    "databases": ["mediawiki"]
   }
 }
