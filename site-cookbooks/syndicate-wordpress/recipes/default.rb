@@ -28,9 +28,38 @@ subversion install_path do
   group "admin"
 end
 
+# Write WordPress configuration
+template File.join(install_path, 'wp-config.php') do
+  source "wp-config.php.erb"
+end
+
+# Set up the database
+mysql_connection_info = {
+  :host     => 'localhost',
+  :username => 'root',
+  :password => node['mysql']['server_root_password']
+}
+
+mysql_database_user node['syndicate-wordpress']['db']['user'] do
+  connection mysql_connection_info
+  password node['syndicate-wordpress']['db']['password']
+end
+
+mysql_database node['syndicate-wordpress']['db']['name'] do
+  connection mysql_connection_info
+  owner node['syndicate-wordpress']['db']['user']
+end
+
+mysql_database_user node['syndicate-wordpress']['db']['user'] do
+  connection mysql_connection_info
+  action :grant
+  privileges [:all]
+  database_name node['syndicate-wordpress']['db']['name']
+end
+
 # Download wp-cli
 remote_file "/usr/local/bin/wp" do
-  source "https://github.com/wp-cli/wp-cli/releases/download/v0.13.0/wp-cli.phar"
+  source "https://github.com/wp-cli/wp-cli/releases/download/v0.13.0/wp-cli-0.13.0.phar"
   checksum "3d961210c1872831329172b60e778c77ac54396bbf7547f461db4aa27eafa26e"
   mode 0755
 end
@@ -70,11 +99,6 @@ themes.select{|theme| theme['type'] == 'svn'}.each do |theme|
   end
 end
 
-# Write WordPress configuration
-template File.join(install_path, 'wp-config.php') do
-  source "wp-config.php.erb"
-end
-
 # Write .htaccess file
 template File.join(install_path, '.htaccess') do
   source "htaccess.erb"
@@ -91,30 +115,6 @@ bash "set WordPress ownership and permissions" do
   BASH
 end
 
-# Set up the database
-mysql_connection_info = {
-  :host     => 'localhost',
-  :username => 'root',
-  :password => node['mysql']['server_root_password']
-}
-
-mysql_database_user node['syndicate-wordpress']['db']['user'] do
-  connection mysql_connection_info
-  password node['syndicate-wordpress']['db']['password']
-end
-
-mysql_database node['syndicate-wordpress']['db']['name'] do
-  connection mysql_connection_info
-  owner node['syndicate-wordpress']['db']['user']
-end
-
-mysql_database_user node['syndicate-wordpress']['db']['user'] do
-  connection mysql_connection_info
-  action :grant
-  privileges [:all]
-  database_name node['syndicate-wordpress']['db']['name']
-end
-
 # Configure apache
 node['syndicate-wordpress']['sites'].each do |site|
   conf_file = "#{site['server_name']}-wordpress"
@@ -125,7 +125,10 @@ node['syndicate-wordpress']['sites'].each do |site|
       server_name: site['server_name'],
       server_aliases: site['server_aliases'].join(' '),
       doc_root: install_path,
-      aliases: site['aliases'] || []
+      aliases: site['aliases'] || [],
+      port: site['port'] || 80,
+      ssl_port: site['ssl_port'] || 443,
+      ssl_enabled: site['ssl_enabled'] == false ? false : true
     )
     owner "root"
     group "root"

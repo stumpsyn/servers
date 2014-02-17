@@ -1,7 +1,7 @@
 # Apache config for domains on the Syndicate server using WordPress multi-site
 # [!!] This file is managed via Chef and should not be edited directly.
 
-<VirtualHost *:80>
+<VirtualHost *:<%= @port %>>
   ServerName <%= @server_name %>
   ServerAlias <%= @server_aliases %>
 
@@ -22,7 +22,8 @@
   <% end %>
 </VirtualHost>
 
-<VirtualHost *:443>
+<% if @ssl_enabled %>
+<VirtualHost *:<%= @ssl_port %>>
   ServerName <%= @server_name %>
   ServerAlias <%= @server_aliases %>
 
@@ -46,3 +47,4 @@
   SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem
   SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
 </VirtualHost>
+<% end %>

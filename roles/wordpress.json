@@ -9,7 +9,7 @@
   "default_attributes": {
     "secrets": ["syndicate-wordpress"],
     "syndicate-wordpress": {
-      "version": "3.8"
+      "version": "3.8.1"
     }
   },
   "chef_type": "role",

@@ -4,6 +4,7 @@
     "role[proxied-apache]",
     "role[mysql]",
     "role[osbridge-ocw]",
+    "role[wordpress]"
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
   "server-banner": {
@@ -14,5 +15,53 @@
   },
   "simple-mysql-database": {
     "databases": ["mediawiki"]
+  },
+  "syndicate-wordpress": {
+    "multisite": false,
+    "db": {
+      "name": "osbridge_wordpress"
+    },
+    "plugins": [
+      "markdown-on-save",
+      "browserid",
+      "advanced-category-excluder",
+      "jetpack",
+      "akismet",
+      "allow_numeric_stubs.php",
+      "backtype-connect",
+      "embed-iframe",
+      "feedburner-plugin",
+      "google-analyticator",
+      "google-sitemap-generator",
+      "markdown-on-save",
+      "podpress",
+      "raw-html",
+      "redirection",
+      "stats",
+      "text-control",
+      "w3-total-cache",
+      "wphone",
+      "wp-syntax"
+    ],
+    "sites": [
+      {
+        "server_name": "opensourcebridge.org",
+        "server_aliases": [
+          "www.opensourcebridge.org",
+          "osbridge.local"
+        ],
+        "theme": {
+          "type": "git",
+          "name": "osbp_wordpress_theme_v3",
+          "repo": "https://github.com/osbridge/osbp_wordpress.git"
+        },
+        "port": 5500,
+        "ssl_enabled": false,
+        "aliases": {
+          "/wiki": "/var/www/mediawiki/index.php",
+          "/mw": "/var/www/mediawiki/"
+        }
+      }
+    ]
   }
 }
