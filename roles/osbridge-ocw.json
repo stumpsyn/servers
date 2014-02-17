@@ -1,9 +1,8 @@
 {
-  "name": "osbridge",
+  "name": "osbridge-ocw",
   "run_list": [
     "role[nginx]",
     "role[mysql]",
-    "role[apache]",
     "recipe[ruby_install]",
     "recipe[xml]",
     "recipe[nodejs]",
@@ -16,18 +15,8 @@
         "osbridge-ocw"
       ]
     },
-    "firewall": {
-      "rules": [
-        {"http": { "port": "5500" } }
-      ]
-    },
     "simple-mysql-database": {
       "databases": ["osbridge_ocw"]
-    }
-  },
-  "override_attributes": {
-    "apache": {
-      "listen_ports": ["5500"]
     }
   },
   "chef_type": "role",

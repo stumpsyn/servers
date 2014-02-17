@@ -1,6 +1,6 @@
 {
   "run_list": [
-    "role[osbridge]"
+    "role[osbridge-ocw]",
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
   "server-banner": {
