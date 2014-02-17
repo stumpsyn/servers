@@ -39,6 +39,7 @@
         { "name": "iotop" },
         { "name": "elinks" },
         { "name": "unzip" },
+        { "name": "mosh" },
         { "name": "tree" }
       ]
     },
