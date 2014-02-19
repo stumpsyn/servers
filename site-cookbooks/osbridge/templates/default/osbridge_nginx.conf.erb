@@ -28,6 +28,7 @@ server {
   #   break;
   # }
 
+  # Serve common assets
   location ^~ /common/ {
     alias /var/www/common_assets/;
   }
@@ -43,13 +44,19 @@ server {
     deny all;
   }
 
-  location ~ ^/(assets)/  {
+  location ~ ^/(assets|system)/  {
     root /var/www/osbridge-ocw/current/public;
     expires max;
     add_header  Cache-Control public;
   }
 
-  location @rails_app {
+  location ~ ^/\d{3}.html$  {
+    root /var/www/osbridge-ocw/current/public;
+    expires max;
+    add_header  Cache-Control public;
+  }
+
+  location ~* ^/(sign_in|sign_out|auth|authentications|events|manage|comments|proposals|sessions|schedule|sessions_terse|users|session_types|tracks|rooms|selector_votes)/? {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
     proxy_redirect off;
