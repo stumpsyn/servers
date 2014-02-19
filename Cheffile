@@ -30,6 +30,7 @@ cookbook 'newrelic', git: 'https://github.com/heavywater/chef-newrelic.git'
 cookbook 'nginx'
 
 # Apache
+cookbook 'php'
 cookbook 'apache2'
 
 # Puma App

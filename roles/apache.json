@@ -2,6 +2,7 @@
   "name": "apache",
   "run_list": [
     "role[base]",
+    "recipe[php]",
     "recipe[apache2]",
     "recipe[apache2::mod_ssl]",
     "recipe[apache2::mod_rewrite]",
