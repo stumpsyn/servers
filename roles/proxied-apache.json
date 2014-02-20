@@ -4,11 +4,6 @@
     "role[apache]"
   ],
   "default_attributes": { 
-    "firewall": {
-      "rules": [
-        {"http": { "port": "5500" } }
-      ]
-    }
   },
   "override_attributes": {
     "apache": {
