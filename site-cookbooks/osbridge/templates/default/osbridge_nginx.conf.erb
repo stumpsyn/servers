@@ -20,7 +20,7 @@ server {
   root /var/www/wordpress;
 
   # try_files $uri/index.html $uri @rails_app;
-  try_files $uri /index.php;
+  try_files $uri @apache;
 
   # TODO: Make this work with new root configuration
   # if (-f $document_root/maintenance.html) {
@@ -40,17 +40,18 @@ server {
     proxy_pass http://osbridge-wordpress;
   }
 
+  location @apache {
+    proxy_set_header X-Real-IP  $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header Host opensourcebridge.org;
+    proxy_pass http://osbridge-wordpress;
+  }
+
   location ~ /\.ht {
     deny all;
   }
 
   location ~ ^/(assets|system)/  {
-    root /var/www/osbridge-ocw/current/public;
-    expires max;
-    add_header  Cache-Control public;
-  }
-
-  location ~ ^/\d{3}.html$  {
     root /var/www/osbridge-ocw/current/public;
     expires max;
     add_header  Cache-Control public;
