@@ -6,6 +6,7 @@
     "role[osbridge-ocw]",
     "role[wordpress]",
     "role[mediawiki]",
+    "recipe[memcached]",
     "recipe[osbridge]"
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
@@ -58,7 +59,7 @@
         "ssl_enabled": false,
         "aliases": {
           "/wiki": "/var/www/mediawiki/index.php",
-          "/mw": "/var/www/mediawiki/"
+          "/wiki-raw": "/var/www/mediawiki/"
         }
       }
     ]
