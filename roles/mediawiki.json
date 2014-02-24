@@ -1,0 +1,17 @@
+{
+  "name": "mediawiki",
+  "run_list": [
+    "role[apache]",
+    "role[mysql]",
+    "recipe[simple-mysql-database]"
+  ],
+  "default_attributes": {
+    "simple-mysql-database": {
+      "databases": ["mediawiki"]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
+
