@@ -26,6 +26,8 @@ cookbook 'platform_packages'
 
 cookbook 'newrelic', git: 'https://github.com/heavywater/chef-newrelic.git'
 
+cookbook 'memcached'
+
 # Nginx
 cookbook 'nginx'
 
