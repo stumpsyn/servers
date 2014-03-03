@@ -27,7 +27,7 @@
       "advanced-category-excluder",
       "jetpack",
       "akismet",
-      "allow_numeric_stubs.php",
+      "numeric-slugs",
       "backtype-connect",
       "embed-iframe",
       "feedburner-plugin",
