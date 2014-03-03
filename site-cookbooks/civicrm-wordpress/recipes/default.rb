@@ -28,6 +28,7 @@ cron "CiviCRM Scheduled Job Processing" do
   command "/usr/bin/php #{install_path}/civicrm/bin/cli.php -s #{node['civicrm-wordpress']['cron']['site']} -u #{node['civicrm-wordpress']['cron']['user']} -p #{node['civicrm-wordpress']['cron']['password']} -e Job -a execute"
   minute "*/5"
   user "wordpress"
+  mailto "root@stumptownsyndicate.org"
 end
 
 raise "Must set node['civicrm-wordpress']['db']['password'] via secrets" unless node['civicrm-wordpress']['db']['password']
