@@ -33,6 +33,10 @@ server {
     alias /var/www/common_assets/;
   }
 
+  location ^~ /badges/ {
+    alias /var/www/badges/;
+  }
+
   location ^~ /wiki/ {
     alias /var/www/mediawiki/;
     try_files $uri @apache;
