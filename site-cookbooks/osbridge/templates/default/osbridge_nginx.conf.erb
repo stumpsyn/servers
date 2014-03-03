@@ -31,7 +31,7 @@ server {
   }
 
   # Don't cache OCW-owned paths
-  if($request_uri ~* "^/(sign_in|sign_out|auth|authentications|events|manage|comments|proposals|sessions|schedule|sessions_terse|users|session_types|tracks|rooms|selector_votes)/?") {
+  if ($request_uri ~* "^/(sign_in|sign_out|auth|authentications|events|manage|comments|proposals|sessions|schedule|sessions_terse|users|session_types|tracks|rooms|selector_votes)/?") {
     set $cache_uri 'null cache';
   }
 
