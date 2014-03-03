@@ -44,8 +44,6 @@ server {
     set $cache_uri 'null cache';
   }
 
-  rewrite_log on;
-
   ### Unified MediaWiki
   # Redirect old pages
   rewrite "^/(\d{4})/wiki(/.*)?$" /wiki/$1$2 permanent;
@@ -59,6 +57,9 @@ server {
   rewrite ^/tag/(.*)$ /blog/tag/$1? permanent;
 
   try_files /wp-content/cache/page_enhanced/${host}${cache_uri}_index.html $uri @apache;
+
+  proxy_buffers 8 16k;
+  proxy_buffer_size 32k;
 
   # TODO: Make this work with new root configuration
   # if (-f $document_root/maintenance.html) {
