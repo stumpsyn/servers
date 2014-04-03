@@ -40,6 +40,8 @@
         { "name": "elinks" },
         { "name": "unzip" },
         { "name": "mosh" },
+        { "name": "screen" },
+        { "name": "tmux" },
         { "name": "tree" }
       ]
     },
