@@ -1,0 +1,13 @@
+{
+  "run_list": [
+    "role[epdx]"
+  ],
+  "set_fqdn": "banzai.stumptownsyndicate.org",
+  "server-banner": {
+    "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#banzai.stumptownsyndicate.org",
+    "image": "banzai.png",
+    "background_color": "#FFF",
+    "text_color": "#E85F3A"
+  }
+}
+

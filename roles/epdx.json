@@ -1,0 +1,38 @@
+{
+  "name": "epdx",
+  "run_list": [
+    "role[nginx]",
+    "role[mysql]",
+    "recipe[ruby_install]",
+    "recipe[xml]",
+    "recipe[sqlite]",
+    "recipe[sphinx]",
+    "recipe[nodejs]",
+    "recipe[puma_app]",
+    "recipe[epdx-cron]"
+  ],
+  "default_attributes": {
+    "platform_packages": {
+      "pkgs": [
+        { "name": "imagemagick" }
+      ]
+    },
+    "ruby_install": { "version": "0.3.1" },
+    "puma_app": {
+      "apps": [
+        "epdx"
+      ]
+    },
+    "sphinx": {
+      "use_mysql": true,
+      "install_method": "source",
+      "version": "2.1.7"
+    },
+    "simple-mysql-database": {
+      "databases": ["epdx_production"]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+

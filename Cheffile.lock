@@ -161,6 +161,17 @@ GIT
       hipsnip-jetty (~> 0.9.0)
 
 GIT
+  remote: https://github.com/reidab/sphinx-cookbook.git
+  ref: master
+  sha: 22ec59fff743310e5f2f0ab74d1daad71784c315
+  specs:
+    sphinx (1.0.3)
+      apt (>= 0.0.0)
+      build-essential (>= 1.1.2)
+      mysql (>= 0.0.0)
+      yum (>= 2.0.0)
+
+GIT
   remote: https://github.com/reidab/znc.git
   ref: master
   sha: 48c837583ed4a436e3893d437c0c07692be0a54d
@@ -206,6 +217,7 @@ DEPENDENCIES
   postfix (>= 0)
   postgresql (>= 0)
   ruby_install (>= 0)
+  sphinx (>= 0)
   sqlite (>= 0)
   sudo (>= 0)
   sysctl (>= 0)

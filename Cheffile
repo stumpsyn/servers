@@ -62,3 +62,6 @@ cookbook 'atheme-services', git: 'https://github.com/reidab/chef-atheme-services
 # Wordpress
 cookbook 'mysql'
 cookbook 'database'
+
+# ePDX
+cookbook 'sphinx', git: 'https://github.com/reidab/sphinx-cookbook.git'

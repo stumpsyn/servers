@@ -1,0 +1,27 @@
+{
+  "name": "data_bag_item_simple-mysql-database_epdx_production",
+  "json_class": "Chef::DataBagItem",
+  "chef_type": "data_bag_item",
+  "data_bag": "simple-mysql-database",
+  "raw_data": {
+    "id": "epdx_production",
+    "name": {
+      "encrypted_data": "wvVTk/IE1oTvYeLrkB+mhVXBNPliXzZOVQSfb9+FWqi3CheK7aTOyC8qB+wH\nub4q\n",
+      "iv": "4hIv50ibf9WKcZKSXsPuHg==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "user": {
+      "encrypted_data": "AdZY4BuvhRsGsmvC2a5v3qXB6U/cptMefAsIyLUN67Y=\n",
+      "iv": "IIkGYIIlSNc5vfvLz/DxTw==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    },
+    "password": {
+      "encrypted_data": "+VbHx8E6VgkJizA0JRmwH4QdWzcSHY2DEAx4kXz2S5IGEzwKoRHAAHg/1BRv\nhDc9\n",
+      "iv": "TW7LvC9bMxcRP/5jjP7f7Q==\n",
+      "version": 1,
+      "cipher": "aes-256-cbc"
+    }
+  }
+}
