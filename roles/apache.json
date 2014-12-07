@@ -17,6 +17,7 @@
         { "name": "php5-memcache" },
         { "name": "php5-tidy" },
         { "name": "php5-curl" },
+        { "name": "php5-intl" },
         { "name": "php-apc" }
       ]
     },
