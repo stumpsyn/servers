@@ -9,6 +9,9 @@
     "recipe[memcached]",
     "recipe[osbridge]"
   ],
+  "users": [
+    "afarrell"
+  ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
   "server-banner": {
     "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#arroway.stumptownsyndicate.org",
