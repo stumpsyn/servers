@@ -4,7 +4,7 @@
     "recipe[chef-solo-search]",
     "recipe[hostname]",
     "recipe[apt]",
-    "recipe[unattended-upgrades]",
+    "recipe[apt::unattended-upgrades]",
     "recipe[ntp]",
     "recipe[sudo]",
     "recipe[user::data_bag]",
@@ -46,10 +46,15 @@
       ]
     },
     "set_fqdn_reload_method": "reload",
-    "unattended-upgrades": {
-      "send_email": true,
-      "email_address": "root@stumptownsyndicate.org"
-    },
+    "apt": {
+      "unattended-upgrades": {
+        "enable": true,
+        "allowed_origins": ["Ubuntu trusty-security"],
+        "auto_fix_interrupted_dpkg": true,
+        "remove_unused_dependencies": true,
+        "mail": "root@stumptownsyndicate.org"
+      }
+    }
     "openssh": {
       "permit_root_login": "no",
       "password_authentication": "no"
