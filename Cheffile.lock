@@ -3,7 +3,9 @@ SITE
   specs:
     7-zip (1.0.2)
       windows (>= 1.2.2)
-    apache2 (1.8.14)
+    apache2 (3.0.1)
+      iptables (>= 0.0.0)
+      logrotate (>= 0.0.0)
     apt (2.6.1)
     ark (0.9.0)
       7-zip (>= 0.0.0)
