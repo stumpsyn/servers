@@ -132,10 +132,10 @@ GIT
 GIT
   remote: https://github.com/phlipper/chef-postgresql.git
   ref: master
-  sha: fc8c96d9ebccca9afb76f5c66ce15ebcd2965626
+  sha: df0423d11db9f4cf1c66ae6d94bcde86ab32f30a
   specs:
-    postgresql (0.13.0)
-      apt (>= 1.9.0)
+    postgresql (0.16.1)
+      apt (>= 2.6.1)
 
 GIT
   remote: https://github.com/reidab/chef-atheme-services.git
