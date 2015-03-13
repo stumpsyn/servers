@@ -48,7 +48,7 @@ cookbook 'hipsnip-solr', git: 'https://github.com/reidab/solr.git', ref: 'both_f
 
 # Etherpad
 cookbook 'etherpad-lite', git: 'https://github.com/OpenWatch/etherpad-lite-cookbook.git'
-cookbook 'postgresql', git: 'https://github.com/phlipper/chef-postgresql.git'
+cookbook 'postgresql'
 cookbook 'nodejs'
 
 # ZNC Server

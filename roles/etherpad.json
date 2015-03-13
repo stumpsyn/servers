@@ -6,6 +6,7 @@
     "recipe[nodejs]",
     "recipe[postgresql]",
     "recipe[postgresql::server]",
+    "recipe[etherpad-lite-db]",
     "recipe[etherpad-lite]"
   ],
   "default_attributes": {
@@ -38,21 +39,6 @@
         "ether-o-meter",
         "scrollto",
         "table_of_contents"
-      ]
-    },
-    "postgresql": {
-      "users": [
-        {
-          "username": "etherpad",
-          "createdb": true,
-          "login": true
-        }
-      ],
-      "databases": [
-        {
-          "name": "etherpad",
-          "owner": "etherpad"
-        }
       ]
     },
     "firewall": {
