@@ -80,7 +80,7 @@ SITE
       yum-epel (>= 0.0.0)
     smf (2.2.5)
       rbac (>= 1.0.1)
-    sqlite (1.0.0)
+    sqlite (1.1.0)
     sudo (2.7.1)
     sysctl (0.6.2)
       ohai (>= 0.0.0)
