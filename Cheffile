@@ -23,7 +23,7 @@ cookbook 'xml'
 cookbook 'zsh'
 cookbook 'platform_packages'
 
-cookbook 'newrelic', git: 'https://github.com/heavywater/chef-newrelic.git'
+cookbook 'newrelic', git: 'https://github.com/escapestudios-cookbooks/chef-newrelic.git'
 
 cookbook 'memcached'
 

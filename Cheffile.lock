@@ -16,6 +16,7 @@ SITE
     chef-sugar (2.5.0)
     chef_handler (1.1.6)
     cron (1.6.1)
+    curl (2.0.1)
     database (4.0.3)
       postgresql (>= 1.0.0)
     fail2ban (2.2.1)
@@ -129,12 +130,13 @@ GIT
       postgresql (>= 0.0.0)
 
 GIT
-  remote: https://github.com/heavywater/chef-newrelic.git
+  remote: https://github.com/escapestudios-cookbooks/chef-newrelic.git
   ref: master
-  sha: 054bcdf050bdca3c290db2170bf7a2b606aeb78f
+  sha: 41a151f4f9645bbf448d751ff5bf91f782d93abe
   specs:
-    newrelic (0.2.6)
-      apt (>= 0.0.0)
+    newrelic (2.8.0)
+      curl (>= 0.0.0)
+      python (>= 0.0.0)
 
 GIT
   remote: https://github.com/hipsnip-cookbooks/solr.git
