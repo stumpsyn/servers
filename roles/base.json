@@ -54,7 +54,7 @@
         "remove_unused_dependencies": true,
         "mail": "root@stumptownsyndicate.org"
       }
-    }
+    },
     "openssh": {
       "permit_root_login": "no",
       "password_authentication": "no"
