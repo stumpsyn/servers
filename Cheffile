@@ -7,7 +7,7 @@ site 'http://community.opscode.com/api/v1'
 cookbook 'chef-solo-search', git: 'git://github.com/edelight/chef-solo-search.git'
 
 # Base
-cookbook 'hostname', git: 'https://github.com/nickola/chef-hostname.git'
+cookbook 'hostname'
 cookbook 'apt'
 cookbook 'fail2ban'
 cookbook 'htop'

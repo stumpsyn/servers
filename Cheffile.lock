@@ -25,6 +25,9 @@ SITE
     firewall (0.11.8)
     hipsnip-jetty (0.9.0)
       java (>= 1.10.0)
+    hostname (0.3.0)
+      hostsfile (>= 0.0.0)
+    hostsfile (2.4.5)
     htop (2.0.0)
       yum-repoforge (>= 0.0.0)
     iis (4.1.0)
@@ -144,13 +147,6 @@ GIT
   specs:
     hipsnip-solr (0.5.0)
       hipsnip-jetty (~> 0.9.0)
-
-GIT
-  remote: https://github.com/nickola/chef-hostname.git
-  ref: master
-  sha: e9bc75a59be6907bf7fe2bc701d2256fb4f841b7
-  specs:
-    hostname (1.0.0)
 
 GIT
   remote: https://github.com/reidab/chef-atheme-services.git
