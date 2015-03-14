@@ -188,9 +188,9 @@ GIT
 GIT
   remote: https://github.com/rosstimson/chef-ruby_install.git
   ref: master
-  sha: 09e1930202ff237e28d5f44a3ec96ce5c4e1dc8d
+  sha: 364e854265af989c0e69ccc2b096fa4e11cb6d5b
   specs:
-    ruby_install (0.1.0)
+    ruby_install (1.0.5)
       apt (>= 0.0.0)
       ark (>= 0.0.0)
       yum (>= 0.0.0)

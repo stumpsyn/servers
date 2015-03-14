@@ -1,6 +1,6 @@
 {
   "id": "epdx",
-  "ruby_version": "ruby 2.0.0-p247",
+  "ruby_version": "ruby 2.1.5",
   "domains": [
     "epdx.org",
     "www.epdx.org",

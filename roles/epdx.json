@@ -17,7 +17,6 @@
         { "name": "imagemagick" }
       ]
     },
-    "ruby_install": { "version": "0.3.1" },
     "puma_app": {
       "apps": [
         "epdx"

@@ -1,6 +1,6 @@
 {
   "id": "calagator",
-  "ruby_version": "ruby 2.0.0-p247",
+  "ruby_version": "ruby 2.1.5",
   "domains": [
     "calagator.org",
     "calagator.stumptownsyndicate.org"

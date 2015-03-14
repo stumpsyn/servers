@@ -14,7 +14,6 @@
         { "name": "libsqlite3-dev" }
       ]
     },
-    "ruby_install": { "version": "0.3.1" },
     "puma_app": {
       "apps": [
         "ignite-corvallis-proposals"

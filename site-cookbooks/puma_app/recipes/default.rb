@@ -54,9 +54,7 @@ apps.each do |app_to_load|
   }
 
   # Install the desired ruby version
-  ruby_install_ruby app["ruby_version"] do
-    prefix_path ruby_path
-  end
+  ruby_install_ruby app["ruby_version"]
 
   # Install bundler
   gem_package "bundler" do
