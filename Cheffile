@@ -21,7 +21,7 @@ cookbook 'ufw'
 cookbook 'user', git: 'git://github.com/fnichol/chef-user.git'
 cookbook 'xml'
 cookbook 'zsh'
-cookbook 'platform_packages'
+cookbook 'platform_packages', git: 'https://github.com/universityofderby/chef-platform_packages.git'
 
 cookbook 'newrelic', git: 'https://github.com/escapestudios-cookbooks/chef-newrelic.git'
 
