@@ -3,9 +3,7 @@
   "run_list": [
     "role[base]",
     "recipe[secrets]",
-    "recipe[mysql::client]",
-    "recipe[mysql::ruby]",
-    "recipe[mysql::server]",
+    "recipe[syndicate-mysql]",
     "recipe[simple-mysql-database]"
   ],
   "default_attributes": {
