@@ -58,4 +58,5 @@ cookbook 'mysql'
 cookbook 'database'
 
 # ePDX
-cookbook 'sphinx', git: 'https://github.com/reidab/sphinx-cookbook.git'
+cookbook 'sphinx', git: 'https://github.com/reidab/sphinx-cookbook.git',
+                   ref: 'support-mysql-cookbook-v6'
