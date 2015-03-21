@@ -1,7 +1,7 @@
 mysql_connection_info = {
-  :host     => 'localhost',
   :username => 'root',
-  :password => node['mysql']['server_root_password']
+  :password => node['mysql']['server_root_password'],
+  :socket => '/run/mysql-default/mysqld.sock'
 }
 
 node['simple-mysql-database']['databases'].each do |db_to_load|
