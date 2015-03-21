@@ -1,7 +1,5 @@
 # Sets up WordPress, while making a heap of assumptions
 
-include_recipe "database::mysql"
-
 raise "Must set node['syndicate-wordpress']['db']['password'] via secrets" unless node['syndicate-wordpress']['db']['password']
 
 ["auth_key", "secure_auth_key", "logged_in_key", "nonce_key", "auth_salt", 
@@ -35,9 +33,9 @@ end
 
 # Set up the database
 mysql_connection_info = {
-  :host     => 'localhost',
   :username => 'root',
-  :password => node['mysql']['server_root_password']
+  :password => node['mysql']['server_root_password'],
+  :socket => '/run/mysql-default/mysqld.sock'
 }
 
 mysql_database_user node['syndicate-wordpress']['db']['user'] do
