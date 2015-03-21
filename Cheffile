@@ -55,6 +55,7 @@ cookbook 'atheme-services', git: 'https://github.com/reidab/chef-atheme-services
 
 # Wordpress
 cookbook 'mysql'
+cookbook 'mysql2_chef_gem'
 cookbook 'database'
 
 # ePDX
