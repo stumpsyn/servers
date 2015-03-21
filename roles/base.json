@@ -30,6 +30,7 @@
     ],
     "platform_packages": {
       "pkgs": [
+        { "name": "ipset" },
         { "name": "git-core" },
         { "name": "subversion" },
         { "name": "vim" },
