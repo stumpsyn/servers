@@ -6,11 +6,13 @@
     "recipe[nodejs]",
     "recipe[postgresql]",
     "recipe[postgresql::server]",
+    "recipe[postgresql::client]",
+    "recipe[postgresql::ruby]",
     "recipe[etherpad-lite-db]",
     "recipe[etherpad-lite]"
   ],
   "default_attributes": {
-    "secrets": [ "etherpad-lite" ],
+    "secrets": [ "etherpad-lite", "postgresql" ],
     "users": [ "etherpad" ],
     "platform_packages": {
       "pkgs": [
