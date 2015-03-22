@@ -21,6 +21,7 @@
       }
     },
     "atheme-services": {
+      "checksum": "5e53add7a45622778088e808c3a6425afb76c715a4feccbcd74a4ee544c3b470",
       "protocol": "ngircd",
       "serverinfo": {
         "netname": "Stumptown Syndicate IRC",
