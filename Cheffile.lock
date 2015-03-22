@@ -12,7 +12,7 @@ SITE
       windows (>= 0.0.0)
     bluepill (2.3.1)
       rsyslog (>= 0.0.0)
-    build-essential (2.1.3)
+    build-essential (2.2.0)
     chef-sugar (2.5.0)
     chef_handler (1.1.6)
     cron (1.6.1)
@@ -87,7 +87,7 @@ SITE
       yum-epel (>= 0.0.0)
     rbac (1.0.2)
     rsyslog (1.15.0)
-    runit (1.5.16)
+    runit (1.5.18)
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
@@ -187,7 +187,7 @@ GIT
 GIT
   remote: https://github.com/reidab/znc.git
   ref: master
-  sha: 332fdf587b01a3418b8b488471aabc6691ab1bb2
+  sha: 772cb75f9d3a4ca7f0b6776aa11f0eea7a683cc7
   specs:
     znc (0.0.1)
       build-essential (>= 0.0.0)
