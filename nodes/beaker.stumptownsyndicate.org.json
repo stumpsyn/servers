@@ -39,6 +39,9 @@
     ]
   },
   "syndicate-wordpress": {
+    "title": "Stumptown Syndicate",
+    "url": "http://stumptownsyndicate.org",
+    "admin_email": "admin@stumptownsyndicate.org",
     "plugins": [
       "markdown-on-save",
       "raw-html",

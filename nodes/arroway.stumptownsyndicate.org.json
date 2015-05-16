@@ -21,6 +21,9 @@
   },
   "syndicate-wordpress": {
     "multisite": false,
+    "title": "Open Source Bridge",
+    "url": "http://opensourcebridge.org",
+    "admin_email": "web@opensourcebridge.org",
     "db": {
       "name": "osbridge_wordpress"
     },

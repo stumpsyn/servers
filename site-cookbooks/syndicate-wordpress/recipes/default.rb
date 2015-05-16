@@ -62,6 +62,19 @@ remote_file "/usr/local/bin/wp" do
   mode 0755
 end
 
+execute "initialize wordpress" do
+  command %Q{wp core install --url="#{node['syndicate-wordpress']['url']}" --title="#{node['syndicate-wordpress']['title']}" --admin_user="admin" --admin_email="#{node['syndicate-wordpress']['admin_email']}" --admin_password="#{('0'..'z').to_a.shuffle.join.sub(/`/,'')}"}
+  cwd install_path
+  user "wordpress"
+  not_if "wp core is-installed --path=#{install_path}"
+end
+
+execute "upgrade wordpress" do
+  command "wp core update && wp core update-db"
+  cwd install_path
+  user "wordpress"
+end
+
 # Install plugins
 node['syndicate-wordpress']['plugins'].each do |plugin|
   execute "wp_install_#{plugin}" do
