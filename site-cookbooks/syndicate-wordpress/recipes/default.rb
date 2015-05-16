@@ -35,7 +35,7 @@ end
 mysql_connection_info = {
   :username => 'root',
   :password => node['mysql']['server_root_password'],
-  :socket => '/run/mysql-default/mysqld.sock'
+  :socket => node['mysql']['socket']
 }
 
 mysql_database_user node['syndicate-wordpress']['db']['user'] do

@@ -9,6 +9,7 @@
   "default_attributes": {
     "secrets": ["mysql"],
     "mysql": {
+      "socket": "/run/mysql-default/mysqld.sock",
       "remove_anonymous_users": true,
       "allow_remote_root": false,
       "remove_test_database": true,
