@@ -1,4 +1,4 @@
-default['syndicate-wordpress']['version'] = "3.8"
+default['syndicate-wordpress']['version'] = "4.2.2"
 default['syndicate-wordpress']['install-path'] = "/var/www/wordpress"
 
 default['syndicate-wordpress']['multisite'] = true

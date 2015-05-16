@@ -57,8 +57,8 @@ end
 
 # Download wp-cli
 remote_file "/usr/local/bin/wp" do
-  source "https://github.com/wp-cli/wp-cli/releases/download/v0.17.1/wp-cli.phar"
-  checksum "06f30c508e9237e3edd1e4abe26c7977f3c805560c593cb478be35b1471632f0"
+  source "https://github.com/wp-cli/wp-cli/releases/download/v0.19.1/wp-cli-0.19.1.phar"
+  checksum "4c5a39b6794f4aa84ddb6f4f5f6d35a50b12d5b0911939fcacc2c935f483d642"
   mode 0755
 end
 
