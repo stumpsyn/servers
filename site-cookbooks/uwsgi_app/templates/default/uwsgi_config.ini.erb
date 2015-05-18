@@ -1,0 +1,29 @@
+[uwsgi]
+
+# Django-related settings
+# the base directory (full path)
+chdir           = <%= @current_path %>
+# Django's wsgi file
+module          = <%= @uwsgi_module %>
+# the virtualenv (full path)
+home            = <%= @venv_path %>
+
+uid             = <%= @user %>
+
+logger = file:<%= @shared_path %>/log/uwsgi.log
+
+# process-related settings
+# master
+master          = true
+# maximum number of worker processes
+processes       = <%= @uwsgi_workers %>
+# the socket (use the full path to be safe
+socket          = <%= @uwsgi_socket %>
+# ... with appropriate permissions
+chmod-socket    = 664
+chown-socket = <%= @user %>:www-data
+
+buffer-size=32768
+
+# clear environment on exit
+vacuum          = true
