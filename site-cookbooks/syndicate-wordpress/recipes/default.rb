@@ -81,6 +81,7 @@ node['syndicate-wordpress']['plugins'].each do |plugin|
     command "wp plugin install #{plugin}"
     cwd install_path
     user "wordpress"
+    not_if { File.exist?(File.join(install_path, 'wp-content', 'plugins', plugin)) }
   end
 end
 
