@@ -1,0 +1,21 @@
+{
+  "id": "osbridge_volunteer",
+  "name": {
+    "encrypted_data": "O5DHRqWkJeNzBcm6hi2LbFMGlCo5R35Kb2Jo+OEclTEjcsVxwborPKZEjzR1\nhOSb\n",
+    "iv": "BJfaI54YmkqJJ5VD6g9awg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "user": {
+    "encrypted_data": "6Dr4VIzV6vkd+X2TUvSTM2o2qr6RKbPJXPLOSeVfBCI9urWvVhrepuS3g4K1\nCgPZ\n",
+    "iv": "Dw49wHIzWhm/1fw0MXFWMg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "password": {
+    "encrypted_data": "w71RRiTntekMc6hrmd3urZfcMyvAkwIQNdQR7iErNvJQyvCAoB9h+eiYuDti\nMfdsZCeL2xm50dPiC+w28u9fdg==\n",
+    "iv": "Y+TiBtROzxD/16lPWi6baA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

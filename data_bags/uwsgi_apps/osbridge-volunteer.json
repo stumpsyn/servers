@@ -1,0 +1,19 @@
+{
+  "id": "osbridge-volunteer",
+  "python_version": "2.7",
+  "domains": [
+    "volunteer.opensourcebridge.org",
+    "volunteer-new.opensourcebridge.org",
+    "osbridge-volunteer.stumptownsyndicate.org"
+  ],
+  "app_subdir": "osbridge_volunteer",
+  "wsgi_module": "osbridge_volunteer.wsgi",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtPUgbh67S9deu/gZ5JQ1N/1kWmYy6SNx4MJqllv1Hl1D6XTy/IBfryvEkvNBCvtb+wU+2TUfg8Wm7OgoEdaAyvMjCTIhTRZWc3yZ96WRlyy+roC4GhIeaCCw3QFY5fkhrsHw9TeE8BLqkHPtB0ZiDC1aithBSPQuzmwQKwyiFVnNTZMZbCgDtMnzmd30Yd80NoOi/Wj4BwnMJGlwtoxOFjTaqpNR7rz6mWeUncJ5jekrXewH5CiP3St8GYRW81JpdE5itpJBjHJ29YKwzQsHczWnFHb3VyX5MKWO/zxT09ezuKNbwLu1JF3DqSUktseFDYwgZ3YtsQ24c3uL3KoHSQ== mail@reidbeels.com",
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAqvyCPo8wOMJ+meoVPAOV2vQaFTTietw5hbmuXXFLDsZSWvCmmiSLjVjORLE+s8Wv20mzds+tuQVroKvFkxhNInTwwfqFJcIiMeCR4XM2RdJSRyz4lfUuD2SM7LfVNWYp7JfDOH3dHminIu5+GZmeVmPn4O9WWzb+QUJJvIFzp8LYeFZm2PVbspVcxLUoR1v7AqTH/JG9Rw0+/yDwn1Nckoaw2pFGa7whJk2PJH6in4XGU+6Vr5Kc/eGtqcwqSoEJpnW/eh8fjNCpmntlDvlXQ+SSm+d5REGxEj9o+hMLz/sercfbLLqj9k2FczKyobI5p6UKJArOFFmzVsugF7DyTQ== kcomandich@gmail.com",
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwH6bKVim5Ykf62Wt+AcqNrqsu1HEkv+WjYPo+bDEY3mK3sZajBVOz9VAcvX/0S90jTHUodaBvs7+QP8iwa1sE0/Oo1UHeZ0xqS1a7j579jVX4IPbBihKJeiP7Gja7pz/6oWWw62j4fbIDFHLAALDhYbww1xB6TBWF23ANzJnzCHiQ/HrolcJVRlBEUttc9U8xk/2K52fUiyg9rQUmsnRcQCDO4sZVeo1p4M4CxCFju4W0QnUmVdH1RluEUp5u1rTI3Zy6wCOp4Cz544dNLahAYVrWy6scZL1Qtwf+X57Nyh3YjkEZgY0IavlN78Hf20zYxiwUZrHpwjwr9SyeDgl4Q==",
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDu587GBALwd46PA+LfEu3OdA9eCaFa56b2OPK92Ioif2kDR5LKzOrmFPm1zhob0WAFDkornS7Uli8yMn0TKVlh5kemCZZxOB6U7RdnymJo/2v1Hao8JWYhpkyhMhc5ZJMRC97Z/hmbDJD8WWKweTJqMKvgfBzbaAkCkCqpjh0xAWT2asG021FBa9VRgAa9GcFQowoqqufcQLMbAp48JKW0qcK+IBkbSXTJDl3FZfVxa1AuXf2aKny6h/EgoAy+0Dfwyxuqw6dSUv7vdt5mviE4b3c61s7KV+N9/A00UuT9l+n3FaynkH1A7POJHpIs0WcUYSkCnXUVs/ktE/I0NU5N",
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA9Ws4pIOx1UvX3L4OYub2JDz9Zp4yvNn0IkMdxKozjPvetFz+V310PfgMqiRPhEeM4YBPD4SxPhhuO99n5WgCn81dvYPdNrgNnDQM8y2OazAO06hA5+wrXU4/Qqn+7DUx33zOAJO8gmZlCdJea/8ZW/U4sUPSbsbrFW3eDhs8ESs3OiXoVwAyvu+V8Sutvvx6LmlA0Tj/sqWlaXiFwf2wFM4Bkx6m2dR78ff+G+ii+KfyrMYhC7pqXE9mABn1gaHIbADbtwlrs7mdeoTJEwdpv28isuRaFkLnbYBOxEKCgKGptUUtZTavF5BK8C5QLUjU9IInJNKhSEe7vGODs4kivQ=="
+  ]
+}
+

@@ -1,0 +1,32 @@
+{
+  "name": "osbridge-ocw",
+  "run_list": [
+    "role[nginx]",
+    "role[mysql]",
+    "recipe[python]",
+    "recipe[uwsgi_app]"
+  ],
+  "default_attributes": {
+    "platform_packages": {
+      "pkgs": [
+        { "name": "libpcre3" },
+        { "name": "libpcre3-dev" }
+      ]
+    },
+    "python": {
+      "verson": "2.7.7"
+    },
+    "uwsgi_app": {
+      "apps": [
+        "osbridge-volunteer"
+      ]
+    },
+    "simple-mysql-database": {
+      "databases": ["osbridge_volunteer"]
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
+
+

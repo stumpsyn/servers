@@ -4,6 +4,7 @@
     "role[proxied-apache]",
     "role[mysql]",
     "role[osbridge-ocw]",
+    "role[osbridge-volunteer]",
     "role[wordpress]",
     "role[mediawiki]",
     "recipe[memcached]",
