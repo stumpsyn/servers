@@ -33,7 +33,7 @@ apps.each do |app_to_load|
   user_home = app['user_home'] || deploy_path
   uwsgi_module = app['wsgi_module'] || "wsgi.py"
 
-  app_environment = app['environment'] || 'production'
+  django_settings_module = app['django_settings_module'] || "#{app_name}.settings"
   uwsgi_threads = app['threads'] || [0, 16]
   uwsgi_workers = app['workers'] || 5
   uwsgi_socket = app['socket'] || "#{shared_path}/tmp/sockets/uwsgi.sock"
@@ -50,7 +50,7 @@ apps.each do |app_to_load|
     app_dir: File.join(current_path, app_subdir),
     venv_path: venv_path,
     user: user_name,
-    app_environment: app_environment,
+    django_settings_module: django_settings_module,
     uwsgi_threads: uwsgi_threads,
     uwsgi_workers: uwsgi_workers,
     uwsgi_socket: uwsgi_socket,
@@ -129,6 +129,10 @@ apps.each do |app_to_load|
     owner "root"
     group "root"
     variables template_context
+  end
+
+  service service_name do
+    action :start
   end
 
   # Let the user sudo to control the service

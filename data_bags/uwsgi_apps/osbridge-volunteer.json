@@ -8,6 +8,7 @@
   ],
   "app_subdir": "osbridge_volunteer",
   "wsgi_module": "osbridge_volunteer.wsgi",
+  "django_settings_module": "osbridge_volunteer.production_settings",
   "ssh_keys": [
     "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtPUgbh67S9deu/gZ5JQ1N/1kWmYy6SNx4MJqllv1Hl1D6XTy/IBfryvEkvNBCvtb+wU+2TUfg8Wm7OgoEdaAyvMjCTIhTRZWc3yZ96WRlyy+roC4GhIeaCCw3QFY5fkhrsHw9TeE8BLqkHPtB0ZiDC1aithBSPQuzmwQKwyiFVnNTZMZbCgDtMnzmd30Yd80NoOi/Wj4BwnMJGlwtoxOFjTaqpNR7rz6mWeUncJ5jekrXewH5CiP3St8GYRW81JpdE5itpJBjHJ29YKwzQsHczWnFHb3VyX5MKWO/zxT09ezuKNbwLu1JF3DqSUktseFDYwgZ3YtsQ24c3uL3KoHSQ== mail@reidbeels.com",
     "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAqvyCPo8wOMJ+meoVPAOV2vQaFTTietw5hbmuXXFLDsZSWvCmmiSLjVjORLE+s8Wv20mzds+tuQVroKvFkxhNInTwwfqFJcIiMeCR4XM2RdJSRyz4lfUuD2SM7LfVNWYp7JfDOH3dHminIu5+GZmeVmPn4O9WWzb+QUJJvIFzp8LYeFZm2PVbspVcxLUoR1v7AqTH/JG9Rw0+/yDwn1Nckoaw2pFGa7whJk2PJH6in4XGU+6Vr5Kc/eGtqcwqSoEJpnW/eh8fjNCpmntlDvlXQ+SSm+d5REGxEj9o+hMLz/sercfbLLqj9k2FczKyobI5p6UKJArOFFmzVsugF7DyTQ== kcomandich@gmail.com",
