@@ -237,6 +237,7 @@ DEPENDENCIES
   platform_packages (>= 0)
   postfix (>= 0)
   postgresql (>= 0)
+  python (>= 0)
   ruby_install (>= 0)
   sphinx (>= 0)
   sqlite (>= 0)
