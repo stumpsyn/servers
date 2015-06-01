@@ -71,6 +71,7 @@ apps.each do |app_to_load|
   %w(shared shared/log shared/config shared/tmp shared/tmp/pids).each do |subdir|
     directory File.join(deploy_path, subdir) do
       owner user_name
+      group 'admin'
       mode "0775"
       recursive true
     end
