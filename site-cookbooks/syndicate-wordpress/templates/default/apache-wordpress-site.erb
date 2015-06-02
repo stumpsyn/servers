@@ -1,6 +1,15 @@
 # Apache config for domains on the Syndicate server using WordPress multi-site
 # [!!] This file is managed via Chef and should not be edited directly.
 
+<Directory <%= @doc_root %>>
+  Order allow,deny
+  Allow from all
+  Require all granted
+
+  AllowOverride All
+  Options FollowSymLinks
+</Directory>
+
 <VirtualHost *:<%= @port %>>
   ServerName <%= @server_name %>
   ServerAlias <%= @server_aliases %>
