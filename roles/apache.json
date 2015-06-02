@@ -23,6 +23,7 @@
     },
     "apache": {
       "timeout": 60,
+      "mpm": "prefork",
       "prefork": {
         "startservers": 5,
         "minspareservers": 5,

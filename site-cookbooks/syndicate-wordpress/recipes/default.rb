@@ -129,7 +129,7 @@ end
 
 # Configure apache
 node['syndicate-wordpress']['sites'].each do |site|
-  conf_file = "#{site['server_name']}-wordpress"
+  conf_file = "#{site['server_name']}-wordpress.conf"
 
   template "/etc/apache2/sites-available/#{conf_file}" do
     source "apache-wordpress-site.erb"
@@ -147,5 +147,15 @@ node['syndicate-wordpress']['sites'].each do |site|
   end
 
   apache_site conf_file
+
+  logrotate_app "#{site['server_name']}-wordpress" do
+    enable true
+    frequency 'weekly'
+    rotate 52
+    path [
+      "/var/log/apache2/#{site['server_name']}-access.log",
+      "/var/log/apache2/#{site['server_name']}-error.log"
+    ]
+  end
 end
 
