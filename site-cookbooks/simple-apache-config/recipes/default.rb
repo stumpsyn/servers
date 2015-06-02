@@ -6,7 +6,7 @@ node['simple-apache-config']['sites'].each do |site|
     recursive true
   end
 
-  template File.join('/','etc', 'apache2', 'sites-available', site['server_name']) do
+  template File.join('/','etc', 'apache2', 'sites-available', "#{site['server_name']}.conf") do
     source "simple-apache-config.erb"
     variables(
       site: site,
