@@ -8,6 +8,7 @@
     "role[wordpress]",
     "role[mediawiki]",
     "recipe[memcached]",
+    "recipe[php-apache2-upload-size]",
     "recipe[osbridge]"
   ],
   "users": [
