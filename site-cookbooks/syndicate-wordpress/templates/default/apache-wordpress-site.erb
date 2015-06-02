@@ -1,7 +1,10 @@
 # Apache config for domains on the Syndicate server using WordPress multi-site
 # [!!] This file is managed via Chef and should not be edited directly.
 
-<Directory <%= @doc_root %>>
+<%- directories = [@aliases.values, @doc_root].flatten.compact.select{|d| d[-1] == '/' } %>
+
+<% directories.each do |dir| %>
+<Directory <%= dir %>>
   Order allow,deny
   Allow from all
   Require all granted
@@ -9,6 +12,7 @@
   AllowOverride All
   Options FollowSymLinks
 </Directory>
+<% end %>
 
 <VirtualHost *:<%= @port %>>
   ServerName <%= @server_name %>
