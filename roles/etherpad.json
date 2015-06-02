@@ -35,7 +35,6 @@
       "admin_enabled": true,
       "plugins": [
         "mediawiki",
-        "markdownify",
         "adminpads",
         "ether-o-meter",
         "scrollto",
