@@ -2,6 +2,18 @@
 
 [Chef](http://www.opscode.com/chef/) cookbooks and configuration for servers run by [Stumptown Syndicate](http://stumptownsyndicate.org). For more information about these servers, consult the [Server Notes](http://stumptownsyndicate.org/wiki/Tech/Server_Notes) on the wiki.
 
+## Upgrade Status
+
+We're in the process of rebuilding servers with Ubuntu 14.04 as a base. The `master` branch is now based on 14.04, while the `ubuntu-12.04` branch is a snapshot of the last deployed 12.04 state.
+
+Server   | Branch
+-------- | -------------
+arroway  | master
+banzai   | ubuntu-12.04
+beaker   | ubuntu-12.04
+bunsen   | ubuntu-12.04
+lucca    | ubuntu-12.04
+
 ## Getting Started
 
 Dependencies for this code are managed using [Bundler](http://bundler.io/) and [librarian-chef](https://github.com/applicationsonline/librarian-chef). You can grab the code and install the dependencies with:
