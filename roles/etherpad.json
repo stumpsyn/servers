@@ -19,7 +19,6 @@
         { "name": "abiword" }
       ]
     },
-    "nodejs": { "version": "0.10.22" },
     "etherpad-lite": {
       "title": "SyndicatePad",
       "domain": "etherpad.stumptownsyndicate.org",
