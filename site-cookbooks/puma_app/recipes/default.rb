@@ -136,4 +136,17 @@ apps.each do |app_to_load|
       "/sbin/reload #{service_name}"
     ]
   end
+
+  logrotate_app app_name do
+    enable true
+    frequency 'weekly'
+    rotate 52
+    path [
+      File.join(shared_path, 'log', 'production.log'),
+      File.join(shared_path, 'log', 'development.log'),
+      File.join(shared_path, 'log', 'test.log'),
+      File.join(shared_path, 'log', "#{@app_name}.nginx.access.log"),
+      File.join(shared_path, 'log', "#{@app_name}.nginx.error.log")
+    ]
+  end
 end

@@ -147,5 +147,15 @@ node['syndicate-wordpress']['sites'].each do |site|
   end
 
   apache_site conf_file
+
+  logrotate_app "#{site['server_name']}-wordpress" do
+    enable true
+    frequency 'weekly'
+    rotate 52
+    path [
+      "/var/log/apache2/#{site['server_name']}-access.log",
+      "/var/log/apache2/#{site['server_name']}-error.log"
+    ]
+  end
 end
 

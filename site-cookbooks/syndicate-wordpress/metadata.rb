@@ -6,3 +6,4 @@ description      'Installs WordPress, with a few assumptions'
 version          '0.1.0'
 
 depends 'database'
+depends 'logrotate'
