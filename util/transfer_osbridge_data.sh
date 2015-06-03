@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run this script on a new instance of the OSB server, with the old IP as an argument.
+# It will transfer databases and rsync relevant data to the new machine.
+
 host=$1
 
 dirs_to_copy=(
