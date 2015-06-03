@@ -12,6 +12,21 @@ server {
   listen 443 ssl;
   listen [::]:443;
 
+  location / {
+    return 302 $scheme://etherpad.stumptownsyndicate.org/;
+  }
+
+  server_name etherpad.opensourcebridge.org;
+  rewrite ^/$ $scheme://etherpad.stumptownsyndicate.org/ redirect;
+  return 302 $scheme://etherpad.stumptownsyndicate.org/p$request_uri;
+}
+
+server {
+  listen 80;
+  listen [::]:80;
+  listen 443 ssl;
+  listen [::]:443;
+
   server_name opensourcebridge.org www.opensourcebridge.org osbridge.stumptownsyndicate.org osbridge.local osbridge-ocw.local;
 
   keepalive_timeout 10;
