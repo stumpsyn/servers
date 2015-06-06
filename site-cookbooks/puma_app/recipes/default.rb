@@ -39,6 +39,8 @@ apps.each do |app_to_load|
 
   puma_config_path = app['config_path'] || File.join(shared_path, 'config', 'puma.rb')
 
+  environment_variables = app['environment_variables'] || {}
+
   template_context = {
     app_name: app_name,
     domains: domains,
@@ -50,7 +52,8 @@ apps.each do |app_to_load|
     puma_threads: puma_threads,
     puma_workers: puma_workers,
     puma_bind: puma_bind,
-    puma_config_path: puma_config_path
+    puma_config_path: puma_config_path,
+    environment_variables: environment_variables
   }
 
   # Install the desired ruby version
@@ -91,6 +94,14 @@ apps.each do |app_to_load|
       File.read("/etc/skel/.bashrc"),
       "export PATH=#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH:/sbin"
     ].join("\n")
+  end
+
+  # Add a file to hold environment variable configuration
+  template File.join(shared_path, "#{app_name}.env") do
+    source "app.env.erb"
+    owner user_name
+    mode "0660"
+    variables template_context
   end
 
   # Generate the puma config

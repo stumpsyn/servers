@@ -10,5 +10,9 @@ respawn
 respawn limit 3 30
 
 env PATH=<%= "#{@shared_path}/ruby/bin:#{@shared_path}/bin:$PATH:/usr/local/bin:/usr/bin" %>
+<% @environment_variables.each do |name, value| -%>
+env <%= name.upcase %>='<%= value.gsub(/'/, "'\"'\"'") %>'
+<% end -%>
+
 chdir <%= @current_path %>
 exec bundle exec puma -C <%= @puma_config_path %>
