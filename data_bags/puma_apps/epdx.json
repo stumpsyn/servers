@@ -6,6 +6,21 @@
     "www.epdx.org",
     "epdx.stumptownsyndicate.org"
   ],
+  "cron_jobs": [
+    {
+      "name": "ePDX Calagator Count Update",
+      "command": "rake calagator:update_count >/dev/null 2>&1",
+      "minute": "*/5",
+      "mailto": "admin@epdx.org"
+    },
+    {
+      "name": "ePDX Sphinx Indexing",
+      "command": "rake thinking_sphinx:index >> /var/www/sites/epdx.org/current/log/cron-thinking_sphinx-index.log 2>&1",
+      "minute": "9",
+      "hour": "2",
+      "mailto": "admin@epdx.org"
+    }
+  ],
   "ssh_keys": [
     "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAtPUgbh67S9deu/gZ5JQ1N/1kWmYy6SNx4MJqllv1Hl1D6XTy/IBfryvEkvNBCvtb+wU+2TUfg8Wm7OgoEdaAyvMjCTIhTRZWc3yZ96WRlyy+roC4GhIeaCCw3QFY5fkhrsHw9TeE8BLqkHPtB0ZiDC1aithBSPQuzmwQKwyiFVnNTZMZbCgDtMnzmd30Yd80NoOi/Wj4BwnMJGlwtoxOFjTaqpNR7rz6mWeUncJ5jekrXewH5CiP3St8GYRW81JpdE5itpJBjHJ29YKwzQsHczWnFHb3VyX5MKWO/zxT09ezuKNbwLu1JF3DqSUktseFDYwgZ3YtsQ24c3uL3KoHSQ== mail@reidbeels.com"
   ]

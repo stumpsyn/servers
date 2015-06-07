@@ -8,8 +8,7 @@
     "recipe[sqlite]",
     "recipe[sphinx]",
     "recipe[nodejs]",
-    "recipe[puma_app]",
-    "recipe[epdx-cron]"
+    "recipe[puma_app]"
   ],
   "default_attributes": {
     "platform_packages": {

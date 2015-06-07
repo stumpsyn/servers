@@ -29,6 +29,8 @@ apps.each do |app_to_load|
   shared_path = File.join(deploy_path, 'shared')
   current_path = File.join(deploy_path, 'current')
 
+  env_loadpath = "#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH:/usr/local/bin:/usr/bin"
+
   user_name = app['user'] || app_name
   user_home = app['user_home'] || deploy_path
 
@@ -40,6 +42,7 @@ apps.each do |app_to_load|
   puma_config_path = app['config_path'] || File.join(shared_path, 'config', 'puma.rb')
 
   environment_variables = app['environment_variables'] || {}
+  cron_jobs = app['cron_jobs'] || []
 
   template_context = {
     app_name: app_name,
@@ -146,6 +149,32 @@ apps.each do |app_to_load|
       "/sbin/restart #{service_name}",
       "/sbin/reload #{service_name}"
     ]
+  end
+
+  # run cron jobs with the app environment
+  cron_jobs.each.with_index do |job, i|
+    next unless job['command']
+
+    cron job['name'] || "#{app_name}_cron_#{i}" do
+      environment job['environment'] || { 'RAILS_ENV' => 'production' }
+      command "cd #{current_path} && bundle exec #{job['command']}"
+
+      if job['time']
+        time job['time'].to_sym
+      else
+        minute job['minute'] || "*"
+        hour job['hour'] || "*"
+        day job['day'] || "*"
+        weekday job['weekday'] || "*"
+        month job['month'] || "*"
+      end
+
+      path job['path'] || env_loadpath
+      home job['home'] || user_home
+      user job['user'] || user_name
+      shell job['shell'] || "/bin/bash"
+      mailto job['mailto'] || "root@stumptownsyndicate.org"
+    end
   end
 
   logrotate_app app_name do
