@@ -15,7 +15,7 @@
     },
     {
       "name": "ePDX Sphinx Indexing",
-      "command": "rake thinking_sphinx:index >> /var/www/sites/epdx.org/current/log/cron-thinking_sphinx-index.log 2>&1",
+      "command": "rake thinking_sphinx:index >> /var/www/epdx/current/log/cron-thinking_sphinx-index.log 2>&1",
       "minute": "9",
       "hour": "2",
       "mailto": "admin@epdx.org"
