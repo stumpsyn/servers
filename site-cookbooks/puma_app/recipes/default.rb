@@ -74,7 +74,7 @@ apps.each do |app_to_load|
   end
 
   # Ensure the shared path, config, pids, and log dirs exist
-  %w(shared shared/log shared/config shared/tmp shared/tmp/pids).each do |subdir|
+  %w(shared shared/public shared/log shared/config shared/tmp shared/tmp/pids).each do |subdir|
     directory File.join(deploy_path, subdir) do
       owner user_name
       group 'admin'
