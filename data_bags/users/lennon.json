@@ -1,0 +1,9 @@
+{
+  "id": "lennon",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6RhMisDSmm6mWNGfDBDIEp0ytb8T7t+fFkQeh2DNaGi8fgDsLnJ62UGpCOQXucs4812m65H/iNkZCfXwNzXjFDl1TQupTLHInc/EiYbwnzO6nOd8UeFhk5n8KjOeV0bhTGzEK8kuHr/8ADH2nPPf+xAFw6HXlQgSNt/2DGlQlr5meudm1kD13xEXW/jAp6Kw8OmGA3SttKSjgf30SAvze5Z9gcctabtY8h6y9sXxCSdqj0AuTN6evGWTVRaFvbKyunDVFeYqGx40eCB6DXqdlHyYYYgaKwaizubUZbc2dGjJLGHaKq5f2nlbHLsj7sifLv+bKcX0XogmzJLPIYHsCQ=="
+  ],
+  "groups": ["admin", "deploy", "www-data"],
+  "shell": "\/bin\/bash"
+}
+

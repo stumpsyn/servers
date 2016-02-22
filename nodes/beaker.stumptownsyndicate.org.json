@@ -5,6 +5,12 @@
     "role[wordpress]",
     "role[civicrm]"
   ],
+  "users": [
+    "christie",
+    "kirsten",
+    "reidab",
+    "lennon"
+  ],
   "set_fqdn": "beaker.stumptownsyndicate.org",
   "server-banner": {
     "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#beaker.stumptownsyndicate.org",
