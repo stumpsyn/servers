@@ -1,0 +1,9 @@
+{
+  "id": "swenson",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1N2cT72e/NOrDjXxIc6pd2taXhWTnKcNbguK0VTKcLCrtD8jUNDhCM7Dl4gE9EQzDp15EJpmkuMM/tg9nZQEqQBQEKMkkJBgqFP14+gP+2bdzR/EIaVUpgsQwThXTPO/f3YH/NMSebFf3cvr4ssMPNYltPyGvkBANRVn2qAVFSOfg9luElWUWpoFDrJD9R8CD3/vInJ431VQDnvjmxn6qjPSbLzXDgQexK8U3z5pe1zsKdTmVpJSdeJRebHPS2qGRjr9hNvqxCi7gQvbxLd6jiM/krw2p+v8zzvKpGhvIZ4XN/iKXJzco2DMrJVKERcGXT16IK7YcrDtNvMuPvGgxw== swenson@lore.local"
+  ],
+  "groups": ["admin", "deploy", "www-data"],
+  "shell": "\/bin\/bash"
+}
+

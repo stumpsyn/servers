@@ -1,0 +1,9 @@
+{
+  "id": "ed",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBNN4WwbQR+dSdv1sllu/90a1ijYwHCFDFWZtvQQAozCUXGN/9KKsO6b6+bp0gaK9tFIba9fY7/Q56Sr1PfilO/gaL3XkHFHnNrFdfnsowDGIhs7EVfXRi2qGGZ02ScMGp3TvS+aJGlBJbyJY4d+wPAmTWn4ifmnH+kx0BsAu0Bot9o+FDo/ZlCRRL1a5tkhYUaCwbwpQA+c9GPGPnvAmf5QoMZgWEBsz3W5Yb7VC1AtTnLH1yyMbVL39/4M1pQf3DmzPWe1WMLEjZUhCzo+rqf+6TMdRaL2eEUDyfNx8ChfOsjriUmcP93qUh2bMQ1x30bUSCcB4j4i3KHEw98u0l ed@tiny"
+  ],
+  "groups": ["admin", "deploy", "www-data"],
+  "shell": "\/bin\/bash"
+}
+

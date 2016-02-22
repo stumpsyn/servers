@@ -12,7 +12,13 @@
     "recipe[osbridge]"
   ],
   "users": [
-    "afarrell"
+    "christie",
+    "kirsten",
+    "reidab",
+    "afarrell",
+    "ed",
+    "swenson",
+    "shawna"
   ],
   "set_fqdn": "arroway.stumptownsyndicate.org",
   "server-banner": {
