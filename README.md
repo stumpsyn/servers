@@ -9,10 +9,9 @@ We're in the process of rebuilding servers with Ubuntu 14.04 as a base. The `mas
 Server   | Branch
 -------- | -------------
 arroway  | master
-banzai   | ubuntu-12.04
 beaker   | ubuntu-12.04
-bunsen   | ubuntu-12.04
-lucca    | ubuntu-12.04
+bunsen   | master
+lucca    | master
 
 ## Getting Started
 
