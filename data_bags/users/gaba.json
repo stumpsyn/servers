@@ -1,0 +1,8 @@
+{
+  "id": "gaba",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJtkkjT2KQW98/Izp8GkyNkD+WePprk7h1tIFjd74KtQwl0gCZaTfQs21UAFTUAjLPCA4jtKpTV3fRph1gLr9VcJxbLDmmlJ2o5G4svWLcbFiVqxMozspJT3EZwB3R/jlscZ3TMPrv87ZsOmXSuIYaohVWrlVspXkVyOaGzYlYMgarbviVzhGi9pLA044YMZ/bJaC75jg4vd1WUoXL31GM/bciPAH0vmDQRFiaGo9uK6hmOVIE3aw2C2vWl0OYVKmba2dY9VTbmxI4JL9nnmjYl8Vg3WlOaiy7GXM50M4J28JdCfzZ/A3gLpWDVZrwGKd2ogp8+NRVhD3/BKxQHBX1 Gabriela@pdxloaner-23662"
+  ],
+  "groups": ["admin", "deploy", "www-data"],
+  "shell": "\/bin\/bash"
+}

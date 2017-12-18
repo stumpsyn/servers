@@ -23,9 +23,8 @@
   "default_attributes": {
     "secrets": ["newrelic"],
     "users": [
-      "christie",
-      "kirsten",
-      "reidab"
+      "reidab",
+      "gaba"
     ],
     "platform_packages": {
       "pkgs": [
