@@ -1,9 +1,7 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apache2 (3.0.1)
-      iptables (>= 0.0.0)
-      logrotate (>= 0.0.0)
+    apache2 (5.0.1)
     apt (6.1.4)
     ark (3.1.0)
       build-essential (>= 0.0.0)
@@ -34,9 +32,9 @@ SITE
       yum-repoforge (>= 0.0.0)
     inifile_chef_gem (0.1.0)
       build-essential (>= 0.0.0)
-    iptables (0.14.1)
+    iptables (4.3.1)
     java (1.31.0)
-    logrotate (1.9.0)
+    logrotate (2.2.0)
     mariadb (1.5.3)
       apt (>= 0.0.0)
       build-essential (>= 0.0.0)
