@@ -13,12 +13,12 @@
   "default_attributes": {
     "platform_packages": {
       "pkgs": [
-        { "name": "php5-mysql" },
-        { "name": "php5-memcache" },
-        { "name": "php5-tidy" },
-        { "name": "php5-curl" },
-        { "name": "php5-intl" },
-        { "name": "php-apc" }
+        { "name": "php-mysql" },
+        { "name": "php-memcache" },
+        { "name": "php-tidy" },
+        { "name": "php-curl" },
+        { "name": "php-intl" },
+        { "name": "php-apcu" }
       ]
     },
     "apache": {
