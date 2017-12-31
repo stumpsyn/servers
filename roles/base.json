@@ -34,7 +34,7 @@
         { "name": "vim" },
         { "name": "rsync" },
         { "name": "htop" },
-        { "name": "ntop" },
+        { "name": "ntopng" },
         { "name": "iotop" },
         { "name": "elinks" },
         { "name": "unzip" },
