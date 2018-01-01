@@ -2,7 +2,7 @@
 
 raise "Must set node['syndicate-wordpress']['db']['password'] via secrets" unless node['syndicate-wordpress']['db']['password']
 
-["auth_key", "secure_auth_key", "logged_in_key", "nonce_key", "auth_salt", 
+["auth_key", "secure_auth_key", "logged_in_key", "nonce_key", "auth_salt",
  "secure_auth_salt", "logged_in_salt", "nonce_salt"].each do |key|
   raise "Must set node['syndicate-wordpress']['#{key}'] via secrets" unless node['syndicate-wordpress'][key]
 end
@@ -60,55 +60,6 @@ remote_file "/usr/local/bin/wp" do
   source "https://github.com/wp-cli/wp-cli/releases/download/v0.19.1/wp-cli-0.19.1.phar"
   checksum "4c5a39b6794f4aa84ddb6f4f5f6d35a50b12d5b0911939fcacc2c935f483d642"
   mode 0755
-end
-
-execute "initialize wordpress" do
-  command %Q{wp core install --url="#{node['syndicate-wordpress']['url']}" --title="#{node['syndicate-wordpress']['title']}" --admin_user="admin" --admin_email="#{node['syndicate-wordpress']['admin_email']}" --admin_password="#{('0'..'z').to_a.shuffle.join.sub(/`/,'')}"}
-  cwd install_path
-  user "wordpress"
-  not_if "wp core is-installed --path=#{install_path}"
-end
-
-execute "upgrade wordpress" do
-  command "wp core update && wp core update-db"
-  cwd install_path
-  user "wordpress"
-end
-
-# Install plugins
-node['syndicate-wordpress']['plugins'].each do |plugin|
-  execute "wp_install_#{plugin}" do
-    command "wp plugin install #{plugin}"
-    cwd install_path
-    user "wordpress"
-    not_if { File.exist?(File.join(install_path, 'wp-content', 'plugins', plugin)) }
-  end
-end
-
-if node['syndicate-wordpress']['plugins'].include?('wordpress-mu-domain-mapping')
-  execute "copy_sunrise" do
-    command "cp #{install_path}/wp-content/plugins/wordpress-mu-domain-mapping/sunrise.php #{install_path}/wp-content/"
-  end
-end
-
-# Install custom themes
-themes = node['syndicate-wordpress']['sites'].map{|site| site['theme']}.compact
-
-themes.select{|theme| theme['type'] == 'git'}.each do |theme|
-  git File.join(install_path, 'wp-content', 'themes', theme['name']) do
-    repository theme['repo']
-    user "wordpress"
-    group "admin"
-  end
-end
-
-themes.select{|theme| theme['type'] == 'svn'}.each do |theme|
-  subversion File.join(install_path, 'wp-content', 'themes', theme['name']) do
-    action :export
-    repository theme['repo']
-    user "wordpress"
-    group "admin"
-  end
 end
 
 # Write .htaccess file
