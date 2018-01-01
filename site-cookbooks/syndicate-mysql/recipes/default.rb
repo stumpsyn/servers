@@ -21,10 +21,18 @@ mysql_service 'default' do
   notifies :update, 'apt_update', :before
 end
 
-# mysql_client 'default' do
-  # action :create
-# end
+mysql_client 'default' do
+  action :create
+  version '5.7'
+  package_name 'mysql-community-client'
+end
 
-# mysql2_chef_gem 'default' do
-  # action :install
-# end
+package 'libmysqlclient-dev' do
+  action :install
+end
+
+gem_package 'mysql2' do
+  gem_binary RbConfig::CONFIG['bindir'] + '/gem'
+  version '0.4.10'
+  action :install
+end
