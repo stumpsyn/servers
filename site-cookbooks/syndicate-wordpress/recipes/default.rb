@@ -137,7 +137,7 @@ node['syndicate-wordpress']['sites'].each do |site|
       server_name: site['server_name'],
       server_aliases: site['server_aliases'].join(' '),
       doc_root: install_path,
-      aliases: site['aliases'] || [],
+      aliases: site['aliases'] || {},
       port: site['port'] || 80,
       ssl_port: site['ssl_port'] || 443,
       ssl_enabled: site['ssl_enabled'] == false ? false : true
