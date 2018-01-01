@@ -7,9 +7,9 @@
   "set_fqdn": "dax.stumptownsyndicate.org",
   "server-banner": {
     "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#dax.stumptownsyndicate.org",
-    "image": "beaker.jpg",
+    "image": "dax.jpg",
     "background_color": "#000",
-    "text_color": "#f8712e"
+    "text_color": "#0c0"
   },
   "simple-mysql-database": {
     "databases": ["mediawiki"]
