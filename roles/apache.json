@@ -24,6 +24,9 @@
     "apache": {
       "timeout": 60,
       "mpm": "prefork",
+      "mod_php": {
+        "module_name": "php"
+      },
       "prefork": {
         "startservers": 5,
         "minspareservers": 5,
