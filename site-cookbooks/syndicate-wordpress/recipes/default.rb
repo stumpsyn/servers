@@ -80,9 +80,9 @@ end
 
 # Configure apache
 node['syndicate-wordpress']['sites'].each do |site|
-  conf_file = "#{site['server_name']}-wordpress.conf"
+  conf_file = "#{site['server_name']}-wordpress"
 
-  template "/etc/apache2/sites-available/#{conf_file}" do
+  template "/etc/apache2/sites-available/#{conf_file}.conf" do
     source "apache-wordpress-site.erb"
     variables(
       server_name: site['server_name'],
