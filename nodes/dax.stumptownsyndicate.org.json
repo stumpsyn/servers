@@ -5,6 +5,11 @@
     "role[wordpress]"
   ],
   "set_fqdn": "dax.stumptownsyndicate.org",
+  "openssh": {
+    "server": {
+      "port": "4422"
+    }
+  },
   "server-banner": {
     "link": "http://stumptownsyndicate.org/wiki/Tech/Server_Notes#dax.stumptownsyndicate.org",
     "image": "dax.jpg",
