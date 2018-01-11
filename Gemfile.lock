@@ -56,10 +56,10 @@ GEM
     iniparse (1.4.4)
     ipaddress (0.8.3)
     iso8601 (0.9.1)
-    knife-solo (0.6.0)
+    knife-solo (0.7.0.pre3)
       chef (>= 10.20)
       erubis (~> 2.7.0)
-      net-ssh (>= 2.7, < 4.0)
+      net-ssh (>= 2.7)
     knife-solo_data_bag (2.1.0)
     librarian (0.1.2)
       highline
@@ -77,7 +77,7 @@ GEM
     mixlib-config (2.2.4)
     mixlib-log (1.7.1)
     mixlib-shellout (2.3.2)
-    multi_json (1.12.2)
+    multi_json (1.13.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -89,7 +89,7 @@ GEM
       net-ssh (>= 2.6.5)
       net-ssh-gateway (>= 1.2.0)
     net-telnet (0.1.1)
-    ohai (13.7.0)
+    ohai (13.7.1)
       chef-config (>= 12.5.0.alpha.1, < 14)
       ffi (~> 1.9)
       ffi-yajl (~> 2.2)
@@ -109,7 +109,7 @@ GEM
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
       rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.0)
+    rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -145,7 +145,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  knife-solo
+  knife-solo (= 0.7.0.pre3)
   knife-solo_data_bag
   librarian-chef
 
