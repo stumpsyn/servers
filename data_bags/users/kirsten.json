@@ -1,9 +1,0 @@
-{
-  "id": "kirsten",
-  "ssh_keys": [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAogjto5i2UjPxpFjhVa83C8AhB/cY/sfUU5o1Awbd3G1257JBQk644Wzd+VC1A/TE18HWYyAfZgL1mYe6tl+oovCXZ5uDdQIBs6d2R7WXkpn+msMhoxJAVDUo39ooltKBO7jWGGy+sXQRQrL2J2zNLostJIuAnGBbzjTr1CBLSoF8UaBOA0Uc4yjhwNj5sbyzXLYC9SgVHHrhpAHLcSFzhD+6YzpsJdNUzXnljXu/8OFeKYoBkzmfWRjo2tJmAw/3fj12SbyeTZZyYBm7OqT2pIHw2YZ0Ntl27NafeQu5sf/aGYWWM1NpemTpMymvTtnTwje+6LNfBbLOulcNApt1oQ==",
-    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA15DAwWslvaA91huaKUqy/4QYk6uEDD028uJt/JuamntH7wLR43Mdr/8ih0uz/ynO5ODsa0H7kd7fN6lQ+I5azdqiPaerUOwcwnv2voaTqBOAaMWbgZULU78J8ARxyVaDToW+L/kCy6S6Kgszn/kg6r9eqb2bCdrDLVc0KOkS80WDx1pQS2lVrAxUcVKec3V9YSw53SoeQ9pCdKBZS4bkAaI6zmYfvDlznjZYysJV0wqVnikaf10dPrpqO1x4f00HUwrVceXFE+oiR6E/9IVYP8dA9YuQTgt0hGSWZjWVpkYRpKoGqVD57kDGK+TCdVVf5ScV2MR8pDLCOzOd46kUiQ=="
-  ],
-  "groups": ["admin", "deploy", "www-data"],
-  "shell": "\/bin\/bash"
-}

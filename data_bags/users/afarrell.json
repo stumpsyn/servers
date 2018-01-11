@@ -1,9 +1,0 @@
-{
-  "id": "afarrell",
-  "ssh_keys": [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1y8HVf8T/IhmnXXdBKmmaAfFEKD/YBGieqjxg+nLj4zF37dDe4g5fy0YaOC0gCESS1BZRcaFIqdjK+I39e360zUCzVb0pxzpf4+mGXPdr69PdknrgXOg4ocJux+pZscL6GNCsZoZQAQyRMof1M8ZeXSo33JDcCkFw172duEFGL10J/8dhXfJFBAs1+Q7Pf5e1CXxeDlygvIV82kcJ46wqUU+zBzHxr/dkt88Qo09DOHZbxcHLcRSm0bhzAGQsGs+FiWNDBCkq+fuModV8P7Pcdwbh4H7jrcGGpdljFVcByTBOt0ZsCgh+kKWaob5HqRV10Ly0pIH0/h2AsDE5u6z/Q=="
-  ],
-  "groups": ["admin", "deploy", "www-data"],
-  "shell": "\/bin\/bash"
-}
-

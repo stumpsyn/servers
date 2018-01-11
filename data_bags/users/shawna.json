@@ -1,9 +1,0 @@
-{
-  "id": "shawna",
-  "ssh_keys": [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8T+JEDRliT0hc8oV7cRCwPEYn6Eoc5KJv3KuxaqxWUqAsG3++U6KKlm3RI1aMwU2lDJau6D7Gd8NhhwAGIIPCoGx6fENh8F68hRH36uwpwPrGCme+cjELYzjzMgB8AOu9je0zTpGKEcflycz5FhoBnM/ewDIuf4cmD36s+l3fJiv/wixx13FwOEYYSzrn32cF/ys5Fb3d/ydLiLyJoAti1QSD9pj4qjBdqCwmYMbKw7GZ/Snp+uz8KDfl9wsI26fUkZOTdW6+nRl1ZGbnI2w5GjMZUrg+rXumT9C/VcGY7bF7fANZmkeyt56lcL1IGNnt0LtquAGEFqk0HIFlJ6vz"
-  ],
-  "groups": ["admin", "deploy", "www-data"],
-  "shell": "\/bin\/bash"
-}
-

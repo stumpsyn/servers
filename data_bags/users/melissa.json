@@ -1,9 +1,0 @@
-{
-  "id": "melissa",
-  "ssh_keys": [
-    "TODO"
-  ],
-  "groups": ["admin", "deploy", "www-data"],
-  "shell": "\/bin\/bash"
-}
-
