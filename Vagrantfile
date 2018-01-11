@@ -74,6 +74,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "dax.local" do |new|
     new.vm.box = 'debian/stretch64'
+    new.vm.box_url = nil
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
     # accessing "localhost:8080" will access port 80 on the guest machine.
